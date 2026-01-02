@@ -1,1 +1,2235 @@
-<html></html>
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fed38e62423140adeb570a40772975e3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fed38e62423140adeb570a40772975e3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fed38e62423140adeb570a40772975e3 = L.map(
+                "map_fed38e62423140adeb570a40772975e3",
+                {
+                    center: [43.74086667511683, 10.596970115046798],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f6645384640d42e7f000a11718a2cefe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f6645384640d42e7f000a11718a2cefe.addTo(map_fed38e62423140adeb570a40772975e3);
+        
+    
+            var feature_group_ca7ac1d11ec15fca159db46dea8441d8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_7957ace078a754b5469df0eaa6886251 = L.heatLayer(
+                [[43.8202285, 10.6565212, 6], [43.7101845, 10.6203207, 2], [43.7273019, 10.5877174, 24], [43.6832014, 10.6153079, 6], [43.71551992581777, 10.40155700532758, 2], [43.8315666, 10.604369, 9], [43.6980639, 10.6929976, 14]],
+                {
+  "minOpacity": 0.25,
+  "maxZoom": 12,
+  "radius": 25,
+  "blur": 18,
+}
+            );
+        
+    
+            heat_map_7957ace078a754b5469df0eaa6886251.addTo(feature_group_ca7ac1d11ec15fca159db46dea8441d8);
+        
+    
+            feature_group_ca7ac1d11ec15fca159db46dea8441d8.addTo(map_fed38e62423140adeb570a40772975e3);
+        
+    
+            var feature_group_5a2d8ceaec562da5de58742dffb41daa = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_faf21f9007186716cad5259ad477e3c3 = L.markerClusterGroup(
+                {
+  "spiderfyOnMaxZoom": true,
+  "showCoverageOnHover": false,
+  "zoomToBoundsOnClick": true,
+  "disableClusteringAtZoom": 18,
+}
+            );
+        
+    
+            var marker_fec84aa36a2a56814a6e4f5aa2dfb818 = L.marker(
+                [43.71551992581777, 10.40155700532758],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_4b591a54443d057cc6cd0296eca4609a = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_fec84aa36a2a56814a6e4f5aa2dfb818.setIcon(div_icon_4b591a54443d057cc6cd0296eca4609a);
+        
+    
+        var popup_2248b30d30695130a7312904b3c9268c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e0dd690f8e89e55a49b6bdd139ebba51 = $(`<div id="html_e0dd690f8e89e55a49b6bdd139ebba51" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Arianna</b><br>         Nascita: Pisa<br>         Num. <a href="" target="_blank"></a><br>         Data: 1973-05-27         </div>         </div>`)[0];
+                popup_2248b30d30695130a7312904b3c9268c.setContent(html_e0dd690f8e89e55a49b6bdd139ebba51);
+            
+        
+
+        marker_fec84aa36a2a56814a6e4f5aa2dfb818.bindPopup(popup_2248b30d30695130a7312904b3c9268c)
+        ;
+
+        
+    
+    
+            var marker_6e990cd9245c4ceedfe2aa6bd750f201 = L.marker(
+                [43.71551992581777, 10.40155700532758],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_f6a84eeb73fd1a84127b031b4384cd0c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_6e990cd9245c4ceedfe2aa6bd750f201.setIcon(div_icon_f6a84eeb73fd1a84127b031b4384cd0c);
+        
+    
+        var popup_a105d87f8823ca1f28d62440aa83f40c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0eab9e154ce4b4f8264e39614fa679db = $(`<div id="html_0eab9e154ce4b4f8264e39614fa679db" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Giovanni</b><br>         Nascita: Pisa<br>         Num. <a href="" target="_blank"></a><br>         Data: 1949-10-22         </div>         </div>`)[0];
+                popup_a105d87f8823ca1f28d62440aa83f40c.setContent(html_0eab9e154ce4b4f8264e39614fa679db);
+            
+        
+
+        marker_6e990cd9245c4ceedfe2aa6bd750f201.bindPopup(popup_a105d87f8823ca1f28d62440aa83f40c)
+        ;
+
+        
+    
+    
+            var marker_49a402dd79c299e5e6ec610ad8efd594 = L.marker(
+                [43.7101845, 10.6203207],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_6e0f37a0b829fb54fc39bf541d0d4d1d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_49a402dd79c299e5e6ec610ad8efd594.setIcon(div_icon_6e0f37a0b829fb54fc39bf541d0d4d1d);
+        
+    
+        var popup_befddf616b63301ba058be94fd25c5be = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8a26d72b0d5a56c96626ba5e79929218 = $(`<div id="html_8a26d72b0d5a56c96626ba5e79929218" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TEMPESTINI Tina</b><br>         Nascita: Bientina<br>         Num. <a href="" target="_blank"></a><br>         Data: 1951-08-10         </div>         </div>`)[0];
+                popup_befddf616b63301ba058be94fd25c5be.setContent(html_8a26d72b0d5a56c96626ba5e79929218);
+            
+        
+
+        marker_49a402dd79c299e5e6ec610ad8efd594.bindPopup(popup_befddf616b63301ba058be94fd25c5be)
+        ;
+
+        
+    
+    
+            var marker_3a04df60ad926ea82dbcabcf5b760d0d = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_91f2e92ed4e86bb7a54682f9a6227e6f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3a04df60ad926ea82dbcabcf5b760d0d.setIcon(div_icon_91f2e92ed4e86bb7a54682f9a6227e6f);
+        
+    
+        var popup_d3b5fcec4dea95af4df72d45daa58604 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2ba319dace7772d42e0f066d669bf1fd = $(`<div id="html_2ba319dace7772d42e0f066d669bf1fd" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Lando</b><br>         Nascita: Buti<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-L9WT-7XLQ?i=2832&cc=2043812" target="_blank">78</a><br>         Data: 1910-07-14         </div>         </div>`)[0];
+                popup_d3b5fcec4dea95af4df72d45daa58604.setContent(html_2ba319dace7772d42e0f066d669bf1fd);
+            
+        
+
+        marker_3a04df60ad926ea82dbcabcf5b760d0d.bindPopup(popup_d3b5fcec4dea95af4df72d45daa58604)
+        ;
+
+        
+    
+    
+            var marker_cf7adfc88c46cae4def9754d70be183d = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_44bcf0103f7b2bf92992ac7460951484 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_cf7adfc88c46cae4def9754d70be183d.setIcon(div_icon_44bcf0103f7b2bf92992ac7460951484);
+        
+    
+        var popup_645174c1ae01deff1940b4cf0886c159 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5ae5293e8b2d737ee75577db8b630798 = $(`<div id="html_5ae5293e8b2d737ee75577db8b630798" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BACCI Bianca</b><br>         Nascita: Buti<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSDC-LSL2-W?i=2030" target="_blank">61</a><br>         Data: 1914-06-29         </div>         </div>`)[0];
+                popup_645174c1ae01deff1940b4cf0886c159.setContent(html_5ae5293e8b2d737ee75577db8b630798);
+            
+        
+
+        marker_cf7adfc88c46cae4def9754d70be183d.bindPopup(popup_645174c1ae01deff1940b4cf0886c159)
+        ;
+
+        
+    
+    
+            var marker_42f4d7ed470d39ebf35405699b126127 = L.marker(
+                [43.7101845, 10.6203207],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_8709ea78bece9ef132a89e9ed1619796 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_42f4d7ed470d39ebf35405699b126127.setIcon(div_icon_8709ea78bece9ef132a89e9ed1619796);
+        
+    
+        var popup_bad56798aa439744ced58fcbcd1482e6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5bba458be41603afc80f8ad27887977f = $(`<div id="html_5bba458be41603afc80f8ad27887977f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TEMPESTINI Francesco Valentino Giuseppe</b><br>         Nascita: Bientina<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-L9WT-SXJP?cat=819565&i=2640&lang=it" target="_blank">5</a><br>         Data: 1904-01-23         </div>         </div>`)[0];
+                popup_bad56798aa439744ced58fcbcd1482e6.setContent(html_5bba458be41603afc80f8ad27887977f);
+            
+        
+
+        marker_42f4d7ed470d39ebf35405699b126127.bindPopup(popup_bad56798aa439744ced58fcbcd1482e6)
+        ;
+
+        
+    
+    
+            var marker_2e1c6856256358aaf93b6ec36d580445 = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_83d539ecde1d2aedc7543f3386e5329c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_2e1c6856256358aaf93b6ec36d580445.setIcon(div_icon_83d539ecde1d2aedc7543f3386e5329c);
+        
+    
+        var popup_ef007a4e0da2acc59ec31dbcc5b22c5b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e139f56db839c94ec3b0be521f725d48 = $(`<div id="html_e139f56db839c94ec3b0be521f725d48" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>DELLA MAGGIORA Bruna</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSDX-WSZB-B?cat=721177&i=334&lang=it" target="_blank">149</a><br>         Data: 1911-10-21         </div>         </div>`)[0];
+                popup_ef007a4e0da2acc59ec31dbcc5b22c5b.setContent(html_e139f56db839c94ec3b0be521f725d48);
+            
+        
+
+        marker_2e1c6856256358aaf93b6ec36d580445.bindPopup(popup_ef007a4e0da2acc59ec31dbcc5b22c5b)
+        ;
+
+        
+    
+    
+            var marker_f6ec93ba284e8d15320666339f82519f = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_f8880942e3fb82329f8ee28642017d48 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_f6ec93ba284e8d15320666339f82519f.setIcon(div_icon_f8880942e3fb82329f8ee28642017d48);
+        
+    
+        var popup_6187763a82476d585d2d2c3d585cf872 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c067a446f8a8e765e48b047d9b8dd974 = $(`<div id="html_c067a446f8a8e765e48b047d9b8dd974" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Ermindo Secondo</b><br>         Nascita: Buti<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-99WT-WHDK?i=335&cc=2043812" target="_blank">29</a><br>         Data: 1881-02-22         </div>         </div>`)[0];
+                popup_6187763a82476d585d2d2c3d585cf872.setContent(html_c067a446f8a8e765e48b047d9b8dd974);
+            
+        
+
+        marker_f6ec93ba284e8d15320666339f82519f.bindPopup(popup_6187763a82476d585d2d2c3d585cf872)
+        ;
+
+        
+    
+    
+            var marker_8b24a78ad7c46c70b0ee069db965aa3d = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_e10adaa1f3cbc7ee25c1eba271af295b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_8b24a78ad7c46c70b0ee069db965aa3d.setIcon(div_icon_e10adaa1f3cbc7ee25c1eba271af295b);
+        
+    
+        var popup_94df9120b590792a1569c345f941c165 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_964f8b19fa607d8c7ddd639c52453176 = $(`<div id="html_964f8b19fa607d8c7ddd639c52453176" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CORSI Andreina</b><br>         Nascita: Buti<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9WT-WW36?i=712" target="_blank">220</a><br>         Data: 1885-11-08         </div>         </div>`)[0];
+                popup_94df9120b590792a1569c345f941c165.setContent(html_964f8b19fa607d8c7ddd639c52453176);
+            
+        
+
+        marker_8b24a78ad7c46c70b0ee069db965aa3d.bindPopup(popup_94df9120b590792a1569c345f941c165)
+        ;
+
+        
+    
+    
+            var marker_d364f9c993792668194995a2c3140d5b = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_5dc14ba554fb58767d1bda46f0f79f66 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_d364f9c993792668194995a2c3140d5b.setIcon(div_icon_5dc14ba554fb58767d1bda46f0f79f66);
+        
+    
+        var popup_5f88313b009dd50c1916dcbe3cfe5030 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ac4aa7b3b0e0a3d81c2d8b7c5dcde467 = $(`<div id="html_ac4aa7b3b0e0a3d81c2d8b7c5dcde467" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BACCI Giovanni</b><br>         Nascita: Buti<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-89WT-S2CN?i=269&cc=2043812" target="_blank">144</a><br>         Data: 1871-09-23         </div>         </div>`)[0];
+                popup_5f88313b009dd50c1916dcbe3cfe5030.setContent(html_ac4aa7b3b0e0a3d81c2d8b7c5dcde467);
+            
+        
+
+        marker_d364f9c993792668194995a2c3140d5b.bindPopup(popup_5f88313b009dd50c1916dcbe3cfe5030)
+        ;
+
+        
+    
+    
+            var marker_76fd2326fa96be5198cda02d68c89faf = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_2088fd01db29ca13a271ed7f077960c2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_76fd2326fa96be5198cda02d68c89faf.setIcon(div_icon_2088fd01db29ca13a271ed7f077960c2);
+        
+    
+        var popup_0daa2f872a2471fee0859236e9df7c9a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3c690814ba1ef5767c75adc04331efa0 = $(`<div id="html_3c690814ba1ef5767c75adc04331efa0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PETROGNANI Minusta</b><br>         Nascita: Buti<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-99WT-S24X?i=634&cc=2043812" target="_blank">180</a><br>         Data: 1876-12-03         </div>         </div>`)[0];
+                popup_0daa2f872a2471fee0859236e9df7c9a.setContent(html_3c690814ba1ef5767c75adc04331efa0);
+            
+        
+
+        marker_76fd2326fa96be5198cda02d68c89faf.bindPopup(popup_0daa2f872a2471fee0859236e9df7c9a)
+        ;
+
+        
+    
+    
+            var marker_a5424f3ca9104a8a84c126311631e6bf = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_4b1b0bbbe866ed587b456060cece30ce = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_a5424f3ca9104a8a84c126311631e6bf.setIcon(div_icon_4b1b0bbbe866ed587b456060cece30ce);
+        
+    
+        var popup_d3660cb494444fd0952787a6c724627a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_99359f300f932dcf2de2ca9f00fe57cf = $(`<div id="html_99359f300f932dcf2de2ca9f00fe57cf" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TEMPESTINI Primetto</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSD3-YQNS-5?cat=823715&i=781&lang=it" target="_blank">104</a><br>         Data: 1866-08-26         </div>         </div>`)[0];
+                popup_d3660cb494444fd0952787a6c724627a.setContent(html_99359f300f932dcf2de2ca9f00fe57cf);
+            
+        
+
+        marker_a5424f3ca9104a8a84c126311631e6bf.bindPopup(popup_d3660cb494444fd0952787a6c724627a)
+        ;
+
+        
+    
+    
+            var marker_5aff0a9a123acc2fb9ccf5bd6540ed5a = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_972a87c4db5cd009cd93fbdccefdb43f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_5aff0a9a123acc2fb9ccf5bd6540ed5a.setIcon(div_icon_972a87c4db5cd009cd93fbdccefdb43f);
+        
+    
+        var popup_062fc5ef1c6157d119544ba4f8cf4bfb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3a02d2d9a83e87c9a2a0678d49e36f90 = $(`<div id="html_3a02d2d9a83e87c9a2a0678d49e36f90" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TOTI Maria Quintilia</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSD3-YQYL-T?cat=823715&i=1157&lang=it" target="_blank">4</a><br>         Data: 1871-12-31         </div>         </div>`)[0];
+                popup_062fc5ef1c6157d119544ba4f8cf4bfb.setContent(html_3a02d2d9a83e87c9a2a0678d49e36f90);
+            
+        
+
+        marker_5aff0a9a123acc2fb9ccf5bd6540ed5a.bindPopup(popup_062fc5ef1c6157d119544ba4f8cf4bfb)
+        ;
+
+        
+    
+    
+            var marker_ed19a595caf8e7d69b3a838ebc91c463 = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_c5863af3db83b418ce00b65feb1f927a = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_ed19a595caf8e7d69b3a838ebc91c463.setIcon(div_icon_c5863af3db83b418ce00b65feb1f927a);
+        
+    
+        var popup_6ea1c4c1226076e59e03dadba3e00ce4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e89c1e7211f91af62ea036d507e353f1 = $(`<div id="html_e89c1e7211f91af62ea036d507e353f1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>DELLA MAGGIORA Andrea</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-89W7-D7Y8?cat=721177&i=751&lang=it" target="_blank">1082</a><br>         Data: 1889-08-23         </div>         </div>`)[0];
+                popup_6ea1c4c1226076e59e03dadba3e00ce4.setContent(html_e89c1e7211f91af62ea036d507e353f1);
+            
+        
+
+        marker_ed19a595caf8e7d69b3a838ebc91c463.bindPopup(popup_6ea1c4c1226076e59e03dadba3e00ce4)
+        ;
+
+        
+    
+    
+            var marker_3b7a586096964ec89704f0c306c83d62 = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_b0b098f4f6c81686ee2c63464ed661af = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3b7a586096964ec89704f0c306c83d62.setIcon(div_icon_b0b098f4f6c81686ee2c63464ed661af);
+        
+    
+        var popup_1ec2b8fbe1ac7684eec1ee7cce5b4417 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_53bae88f352e6bc5fe462e0befcf1b1a = $(`<div id="html_53bae88f352e6bc5fe462e0befcf1b1a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>ORLANDI Eugenia</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-89W7-DH62?cat=721177&i=1633&lang=it" target="_blank">39</a><br>         Data: 1891-01-08         </div>         </div>`)[0];
+                popup_1ec2b8fbe1ac7684eec1ee7cce5b4417.setContent(html_53bae88f352e6bc5fe462e0befcf1b1a);
+            
+        
+
+        marker_3b7a586096964ec89704f0c306c83d62.bindPopup(popup_1ec2b8fbe1ac7684eec1ee7cce5b4417)
+        ;
+
+        
+    
+    
+            var marker_4e6d04b3f1cf767970a9f9758e93f6d9 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_4e904b7b234d49ef681d08131ee32d46 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_4e6d04b3f1cf767970a9f9758e93f6d9.setIcon(div_icon_4e904b7b234d49ef681d08131ee32d46);
+        
+    
+        var popup_65b17256b8fac5a0a35348901eb89932 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_936e01cecfbac354aed155034e586c7d = $(`<div id="html_936e01cecfbac354aed155034e586c7d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Anselmo</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36228260/wExrx42" target="_blank">168</a><br>         Data: 1848-07-17         </div>         </div>`)[0];
+                popup_65b17256b8fac5a0a35348901eb89932.setContent(html_936e01cecfbac354aed155034e586c7d);
+            
+        
+
+        marker_4e6d04b3f1cf767970a9f9758e93f6d9.bindPopup(popup_65b17256b8fac5a0a35348901eb89932)
+        ;
+
+        
+    
+    
+            var marker_b8a80faaffdf747f8ef49d3cfa359a87 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_14456939f600056e8277fe015b5b81fb = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_b8a80faaffdf747f8ef49d3cfa359a87.setIcon(div_icon_14456939f600056e8277fe015b5b81fb);
+        
+    
+        var popup_30a9e4bdc592fa10424fc6cfcabf39db = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b05f276f74dccfb86d01d1eb2d197ee8 = $(`<div id="html_b05f276f74dccfb86d01d1eb2d197ee8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Amalia Francesca</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36235002/wOe2VnG" target="_blank">12</a><br>         Data: 1853-01-20         </div>         </div>`)[0];
+                popup_30a9e4bdc592fa10424fc6cfcabf39db.setContent(html_b05f276f74dccfb86d01d1eb2d197ee8);
+            
+        
+
+        marker_b8a80faaffdf747f8ef49d3cfa359a87.bindPopup(popup_30a9e4bdc592fa10424fc6cfcabf39db)
+        ;
+
+        
+    
+    
+            var marker_0cf06f14ea6169a6f76eb8ee498ef49f = L.marker(
+                [43.6832014, 10.6153079],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_daf9b411dffbd6e602728f6a7fcd8a2c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_0cf06f14ea6169a6f76eb8ee498ef49f.setIcon(div_icon_daf9b411dffbd6e602728f6a7fcd8a2c);
+        
+    
+        var popup_c405262b034d36d5cc4b81301dbeb391 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1bc04b9518d6d55f3635eed3821c1862 = $(`<div id="html_1bc04b9518d6d55f3635eed3821c1862" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CORSI Generoso Raffaello Pellegrino</b><br>         Nascita: Calcinaia<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36228041/0n18Emv" target="_blank">25</a><br>         Data: 1848-03-31         </div>         </div>`)[0];
+                popup_c405262b034d36d5cc4b81301dbeb391.setContent(html_1bc04b9518d6d55f3635eed3821c1862);
+            
+        
+
+        marker_0cf06f14ea6169a6f76eb8ee498ef49f.bindPopup(popup_c405262b034d36d5cc4b81301dbeb391)
+        ;
+
+        
+    
+    
+            var marker_8495429aa56dab0dbb84a1afb3d6d9bf = L.marker(
+                [43.6832014, 10.6153079],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_7a482a8ade0cf4854fdb80d2d808e023 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_8495429aa56dab0dbb84a1afb3d6d9bf.setIcon(div_icon_7a482a8ade0cf4854fdb80d2d808e023);
+        
+    
+        var popup_d8f0a6f79bd1872ac736e0889de7ec6d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ef5f840e23811b7ef6c4107014c0d28e = $(`<div id="html_ef5f840e23811b7ef6c4107014c0d28e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MARINAI Maria Caterina Settima</b><br>         Nascita: Calcinaia<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36234302/wOe2ayd" target="_blank">59</a><br>         Data: 1851-07-10         </div>         </div>`)[0];
+                popup_d8f0a6f79bd1872ac736e0889de7ec6d.setContent(html_ef5f840e23811b7ef6c4107014c0d28e);
+            
+        
+
+        marker_8495429aa56dab0dbb84a1afb3d6d9bf.bindPopup(popup_d8f0a6f79bd1872ac736e0889de7ec6d)
+        ;
+
+        
+    
+    
+            var marker_4afc150c7efad1e0c93d7c96b7adbb2e = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_556e3cb45d88218e7ad285a83eb3e381 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_4afc150c7efad1e0c93d7c96b7adbb2e.setIcon(div_icon_556e3cb45d88218e7ad285a83eb3e381);
+        
+    
+        var popup_c23156617fe7aef51a2c106594144479 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6cf6a1567b6cd3fe7044e4b4e54216c9 = $(`<div id="html_6cf6a1567b6cd3fe7044e4b4e54216c9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BACCI Andrea Bernardo</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36226528/wbE7lQA" target="_blank">149</a><br>         Data: 1841-07-11         </div>         </div>`)[0];
+                popup_c23156617fe7aef51a2c106594144479.setContent(html_6cf6a1567b6cd3fe7044e4b4e54216c9);
+            
+        
+
+        marker_4afc150c7efad1e0c93d7c96b7adbb2e.bindPopup(popup_c23156617fe7aef51a2c106594144479)
+        ;
+
+        
+    
+    
+            var marker_1a7974810f0d1d15b9b7780394e94ceb = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_7e0923561b766615c086277cb8057661 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_1a7974810f0d1d15b9b7780394e94ceb.setIcon(div_icon_7e0923561b766615c086277cb8057661);
+        
+    
+        var popup_3031dd4d179b5e3c26e7461aa536593a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0b542b55eb7831e67a5f44cb54e43006 = $(`<div id="html_0b542b55eb7831e67a5f44cb54e43006" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>COSCERA Albina Luisa</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36227519/Lq6VW19" target="_blank">126</a><br>         Data: 1845-05-26         </div>         </div>`)[0];
+                popup_3031dd4d179b5e3c26e7461aa536593a.setContent(html_0b542b55eb7831e67a5f44cb54e43006);
+            
+        
+
+        marker_1a7974810f0d1d15b9b7780394e94ceb.bindPopup(popup_3031dd4d179b5e3c26e7461aa536593a)
+        ;
+
+        
+    
+    
+            var marker_8ac382786ef543342112a959104076a4 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_34ec94b31cfe49711767e23aed8d49f5 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_8ac382786ef543342112a959104076a4.setIcon(div_icon_34ec94b31cfe49711767e23aed8d49f5);
+        
+    
+        var popup_40fbe216fbcd8fe466bda5786951026b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a12b94f1194138a646d29fd9a23f4a40 = $(`<div id="html_a12b94f1194138a646d29fd9a23f4a40" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PETROGNANI Ranieri</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36227765/wlPa6VB" target="_blank">170</a><br>         Data: 1846-07-24         </div>         </div>`)[0];
+                popup_40fbe216fbcd8fe466bda5786951026b.setContent(html_a12b94f1194138a646d29fd9a23f4a40);
+            
+        
+
+        marker_8ac382786ef543342112a959104076a4.bindPopup(popup_40fbe216fbcd8fe466bda5786951026b)
+        ;
+
+        
+    
+    
+            var marker_41f4b35fb160bd0a280e0c025129d294 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_6437747f2477e3ca7a00f9d20b17621b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_41f4b35fb160bd0a280e0c025129d294.setIcon(div_icon_6437747f2477e3ca7a00f9d20b17621b);
+        
+    
+        var popup_160aab3984d7894800ed4db81a427990 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_605ad323e996151571452d56cb5a1f4a = $(`<div id="html_605ad323e996151571452d56cb5a1f4a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CIAMPI Samaria Lorica vulgo Amalia</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36227868/5dYy76X" target="_blank">222</a><br>         Data: 1847-10-12         </div>         </div>`)[0];
+                popup_160aab3984d7894800ed4db81a427990.setContent(html_605ad323e996151571452d56cb5a1f4a);
+            
+        
+
+        marker_41f4b35fb160bd0a280e0c025129d294.bindPopup(popup_160aab3984d7894800ed4db81a427990)
+        ;
+
+        
+    
+    
+            var marker_83b9d68d1935706d764de59d8caf4a7d = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_eb80a271328e9bad3a88b0103152a583 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_83b9d68d1935706d764de59d8caf4a7d.setIcon(div_icon_eb80a271328e9bad3a88b0103152a583);
+        
+    
+        var popup_87ec1c35ea8edc79f82a9ba0ed3313f2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b9002e31455024ee14d381c61d1d78e3 = $(`<div id="html_b9002e31455024ee14d381c61d1d78e3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TEMPESTINI Francesco</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data: 1835         </div>         </div>`)[0];
+                popup_87ec1c35ea8edc79f82a9ba0ed3313f2.setContent(html_b9002e31455024ee14d381c61d1d78e3);
+            
+        
+
+        marker_83b9d68d1935706d764de59d8caf4a7d.bindPopup(popup_87ec1c35ea8edc79f82a9ba0ed3313f2)
+        ;
+
+        
+    
+    
+            var marker_2c3c93256e0689b41e799d1dcab968b3 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_5a831592f28697d12e5997a0086342fd = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_2c3c93256e0689b41e799d1dcab968b3.setIcon(div_icon_5a831592f28697d12e5997a0086342fd);
+        
+    
+        var popup_40ca4e34ea35ac076bcce1ca92050c99 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0c0b38f25b0caf559ff7a2e8637ac4b8 = $(`<div id="html_0c0b38f25b0caf559ff7a2e8637ac4b8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BANCHINI Costanza</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data: 1840         </div>         </div>`)[0];
+                popup_40ca4e34ea35ac076bcce1ca92050c99.setContent(html_0c0b38f25b0caf559ff7a2e8637ac4b8);
+            
+        
+
+        marker_2c3c93256e0689b41e799d1dcab968b3.bindPopup(popup_40ca4e34ea35ac076bcce1ca92050c99)
+        ;
+
+        
+    
+    
+            var marker_90b060b267984f0237d713185da7aca1 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_c1b5ec72082e2b625912c5c008ceb7c8 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_90b060b267984f0237d713185da7aca1.setIcon(div_icon_c1b5ec72082e2b625912c5c008ceb7c8);
+        
+    
+        var popup_33241e4bbf81c84a57bb777508cfb726 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b4ed3294d6ca0fc5048f9efac90c93a0 = $(`<div id="html_b4ed3294d6ca0fc5048f9efac90c93a0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TOTI Giuseppe</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36225174/04Dx47a" target="_blank">40</a><br>         Data: 1836-04-05         </div>         </div>`)[0];
+                popup_33241e4bbf81c84a57bb777508cfb726.setContent(html_b4ed3294d6ca0fc5048f9efac90c93a0);
+            
+        
+
+        marker_90b060b267984f0237d713185da7aca1.bindPopup(popup_33241e4bbf81c84a57bb777508cfb726)
+        ;
+
+        
+    
+    
+            var marker_48d8c3eb05c2ba60de8b75dee60d9217 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_67d17f4304bd5ad56df545ee8da8a8a5 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_48d8c3eb05c2ba60de8b75dee60d9217.setIcon(div_icon_67d17f4304bd5ad56df545ee8da8a8a5);
+        
+    
+        var popup_0ec1333d2fff7ac5f133e3f1ed8cce77 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1f0f24d7db59acc23640c51751ae2971 = $(`<div id="html_1f0f24d7db59acc23640c51751ae2971" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MONTAGNI Maria Emilia</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data: 1840         </div>         </div>`)[0];
+                popup_0ec1333d2fff7ac5f133e3f1ed8cce77.setContent(html_1f0f24d7db59acc23640c51751ae2971);
+            
+        
+
+        marker_48d8c3eb05c2ba60de8b75dee60d9217.bindPopup(popup_0ec1333d2fff7ac5f133e3f1ed8cce77)
+        ;
+
+        
+    
+    
+            var marker_de0f092e3fc9f6b6eac6406c74c5a9de = L.marker(
+                [43.8202285, 10.6565212],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_2385c925d94080392bf4246a73c4853d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_de0f092e3fc9f6b6eac6406c74c5a9de.setIcon(div_icon_2385c925d94080392bf4246a73c4853d);
+        
+    
+        var popup_ad9fb7f6d8df95c63be9b4c60f0344eb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7a42ca658b9a546076ccd15eb5238cc6 = $(`<div id="html_7a42ca658b9a546076ccd15eb5238cc6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>DELLA MAGGIORA Domenico</b><br>         Nascita: Badia Pozzeveri, Altopascio<br>         Num. <a href="" target="_blank"></a><br>         Data: 1860         </div>         </div>`)[0];
+                popup_ad9fb7f6d8df95c63be9b4c60f0344eb.setContent(html_7a42ca658b9a546076ccd15eb5238cc6);
+            
+        
+
+        marker_de0f092e3fc9f6b6eac6406c74c5a9de.bindPopup(popup_ad9fb7f6d8df95c63be9b4c60f0344eb)
+        ;
+
+        
+    
+    
+            var marker_236563c846d786e77b7fa82748acb577 = L.marker(
+                [43.8202285, 10.6565212],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_c93bf62907c35244d6f07bebe362a43c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_236563c846d786e77b7fa82748acb577.setIcon(div_icon_c93bf62907c35244d6f07bebe362a43c);
+        
+    
+        var popup_f8cec37b6354c57525a9a350623f3ab4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bc1811b7d43ae11167fcc77715591da6 = $(`<div id="html_bc1811b7d43ae11167fcc77715591da6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MALANCA Maddalena</b><br>         Nascita: Badia Pozzeveri, Altopascio<br>         Num. <a href="" target="_blank"></a><br>         Data: 1861         </div>         </div>`)[0];
+                popup_f8cec37b6354c57525a9a350623f3ab4.setContent(html_bc1811b7d43ae11167fcc77715591da6);
+            
+        
+
+        marker_236563c846d786e77b7fa82748acb577.bindPopup(popup_f8cec37b6354c57525a9a350623f3ab4)
+        ;
+
+        
+    
+    
+            var marker_9e8a95439fab3b78256f280b6130f398 = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_a6837e6926b13459976ac0091b1f1e3d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_9e8a95439fab3b78256f280b6130f398.setIcon(div_icon_a6837e6926b13459976ac0091b1f1e3d);
+        
+    
+        var popup_f11b1a89e9c12396145a7a0905a1f484 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4642e9abb70fed8047307148f7d1cd06 = $(`<div id="html_4642e9abb70fed8047307148f7d1cd06" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>ORLANDI Emilio</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="" target="_blank"></a><br>         Data: 1865         </div>         </div>`)[0];
+                popup_f11b1a89e9c12396145a7a0905a1f484.setContent(html_4642e9abb70fed8047307148f7d1cd06);
+            
+        
+
+        marker_9e8a95439fab3b78256f280b6130f398.bindPopup(popup_f11b1a89e9c12396145a7a0905a1f484)
+        ;
+
+        
+    
+    
+            var marker_e47a78a1c5af44c25991933ac97f5e1e = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_75735826ba162da878e29aaacc045619 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_e47a78a1c5af44c25991933ac97f5e1e.setIcon(div_icon_75735826ba162da878e29aaacc045619);
+        
+    
+        var popup_b6dffbe42adb3309202bf7f5b6e03cb6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d3b1291847c317b2ff4e2c7575b201b3 = $(`<div id="html_d3b1291847c317b2ff4e2c7575b201b3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BERTUCCELLI Teresa</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="" target="_blank"></a><br>         Data: 1861         </div>         </div>`)[0];
+                popup_b6dffbe42adb3309202bf7f5b6e03cb6.setContent(html_d3b1291847c317b2ff4e2c7575b201b3);
+            
+        
+
+        marker_e47a78a1c5af44c25991933ac97f5e1e.bindPopup(popup_b6dffbe42adb3309202bf7f5b6e03cb6)
+        ;
+
+        
+    
+    
+            var marker_07c86d527074446df3ff3e1892b29c0e = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_bf245481c52b5f19c6998b0182cc543b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_07c86d527074446df3ff3e1892b29c0e.setIcon(div_icon_bf245481c52b5f19c6998b0182cc543b);
+        
+    
+        var popup_b48e6f6ee19938513d07add5e806e9ec = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e2d0e34d39bfb3598cf8e4b0253373df = $(`<div id="html_e2d0e34d39bfb3598cf8e4b0253373df" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Giusto</b><br>         Nascita: Buti<br>         Num. <a href="" target="_blank"></a><br>         Data: 1799         </div>         </div>`)[0];
+                popup_b48e6f6ee19938513d07add5e806e9ec.setContent(html_e2d0e34d39bfb3598cf8e4b0253373df);
+            
+        
+
+        marker_07c86d527074446df3ff3e1892b29c0e.bindPopup(popup_b48e6f6ee19938513d07add5e806e9ec)
+        ;
+
+        
+    
+    
+            var marker_0bd3429142ff2d59d092e309fa7f970a = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_5a7589d2064c8c2526fcfc398abea3ee = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_0bd3429142ff2d59d092e309fa7f970a.setIcon(div_icon_5a7589d2064c8c2526fcfc398abea3ee);
+        
+    
+        var popup_dfa022864327e12590434f0466192b87 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0b89c2c7ac33daa18bea32383df62b56 = $(`<div id="html_0b89c2c7ac33daa18bea32383df62b56" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BARZACCHINI Maria Domenica</b><br>         Nascita: Buti<br>         Num. <a href="" target="_blank"></a><br>         Data: 1806         </div>         </div>`)[0];
+                popup_dfa022864327e12590434f0466192b87.setContent(html_0b89c2c7ac33daa18bea32383df62b56);
+            
+        
+
+        marker_0bd3429142ff2d59d092e309fa7f970a.bindPopup(popup_dfa022864327e12590434f0466192b87)
+        ;
+
+        
+    
+    
+            var marker_de1b11bb600c55dde717c08e4fdc247d = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_58bc6fac42eb3f2f858c1253d73250bd = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_de1b11bb600c55dde717c08e4fdc247d.setIcon(div_icon_58bc6fac42eb3f2f858c1253d73250bd);
+        
+    
+        var popup_c1f0ac6095ec051544eb22c484e2ca46 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3b5858d92ff07a82047b1b66baf851c9 = $(`<div id="html_3b5858d92ff07a82047b1b66baf851c9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BUTI Michele Niccola</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36240027/LaoE6mJ" target="_blank">317</a><br>         Data: 1822-12-05         </div>         </div>`)[0];
+                popup_c1f0ac6095ec051544eb22c484e2ca46.setContent(html_3b5858d92ff07a82047b1b66baf851c9);
+            
+        
+
+        marker_de1b11bb600c55dde717c08e4fdc247d.bindPopup(popup_c1f0ac6095ec051544eb22c484e2ca46)
+        ;
+
+        
+    
+    
+            var marker_da968a8229510cb90fb8f26b416c90d8 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_84ece86be91dbfa126f2f437dc7cd4fd = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_da968a8229510cb90fb8f26b416c90d8.setIcon(div_icon_84ece86be91dbfa126f2f437dc7cd4fd);
+        
+    
+        var popup_94771f9bf374dca8f59b51c48438dee1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c99e4f7ac57cc17fa52d01c7bdd4e6ce = $(`<div id="html_c99e4f7ac57cc17fa52d01c7bdd4e6ce" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GENNAI Maria Assunta</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36224045/Le8VYrR" target="_blank">242</a><br>         Data: 1831-09-10         </div>         </div>`)[0];
+                popup_94771f9bf374dca8f59b51c48438dee1.setContent(html_c99e4f7ac57cc17fa52d01c7bdd4e6ce);
+            
+        
+
+        marker_da968a8229510cb90fb8f26b416c90d8.bindPopup(popup_94771f9bf374dca8f59b51c48438dee1)
+        ;
+
+        
+    
+    
+            var marker_21822a0da1c7b26dd3fa49aa23a20019 = L.marker(
+                [43.6832014, 10.6153079],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_c336efb2e08588182727d25314131d0b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_21822a0da1c7b26dd3fa49aa23a20019.setIcon(div_icon_c336efb2e08588182727d25314131d0b);
+        
+    
+        var popup_4b5ce7b2ffc9bcfba79b5dad5514a1d3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c75456efeccf81492d40cf3deeb19c40 = $(`<div id="html_c75456efeccf81492d40cf3deeb19c40" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CORSI Carlo Pasquale</b><br>         Nascita: Calcinaia<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36254275/w1Moxlo" target="_blank">32</a><br>         Data: 1810-04-21         </div>         </div>`)[0];
+                popup_4b5ce7b2ffc9bcfba79b5dad5514a1d3.setContent(html_c75456efeccf81492d40cf3deeb19c40);
+            
+        
+
+        marker_21822a0da1c7b26dd3fa49aa23a20019.bindPopup(popup_4b5ce7b2ffc9bcfba79b5dad5514a1d3)
+        ;
+
+        
+    
+    
+            var marker_3383eda9bf9f29d22a9ac20900e1ae39 = L.marker(
+                [43.6832014, 10.6153079],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_5419fcceb100a446f09d46a07facc03d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3383eda9bf9f29d22a9ac20900e1ae39.setIcon(div_icon_5419fcceb100a446f09d46a07facc03d);
+        
+    
+        var popup_669414a98e235dbdc2d952ce978020c0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_315724fdb3b69891d534370a6825ffc5 = $(`<div id="html_315724fdb3b69891d534370a6825ffc5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MASONI Rosa</b><br>         Nascita: Calcinaia<br>         Num. <a href="" target="_blank"></a><br>         Data: 1812-03-13         </div>         </div>`)[0];
+                popup_669414a98e235dbdc2d952ce978020c0.setContent(html_315724fdb3b69891d534370a6825ffc5);
+            
+        
+
+        marker_3383eda9bf9f29d22a9ac20900e1ae39.bindPopup(popup_669414a98e235dbdc2d952ce978020c0)
+        ;
+
+        
+    
+    
+            var marker_268215c4b501ef355d0e7a1d0c8c81a5 = L.marker(
+                [43.6832014, 10.6153079],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_d32e9d756c6ce9b08fe0bc5a4dec7ad3 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_268215c4b501ef355d0e7a1d0c8c81a5.setIcon(div_icon_d32e9d756c6ce9b08fe0bc5a4dec7ad3);
+        
+    
+        var popup_3341abc4bf2849102aa6bd43b6c357bf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bb78b267e9e3ed9cb95ef5862ffa996e = $(`<div id="html_bb78b267e9e3ed9cb95ef5862ffa996e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MARINAI Gaspero</b><br>         Nascita: Calcinaia<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_3341abc4bf2849102aa6bd43b6c357bf.setContent(html_bb78b267e9e3ed9cb95ef5862ffa996e);
+            
+        
+
+        marker_268215c4b501ef355d0e7a1d0c8c81a5.bindPopup(popup_3341abc4bf2849102aa6bd43b6c357bf)
+        ;
+
+        
+    
+    
+            var marker_6cacdcf70e34b42beee13512f8f343ea = L.marker(
+                [43.6832014, 10.6153079],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_33428d925a7d84e8551a7b29fdf5ed29 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_6cacdcf70e34b42beee13512f8f343ea.setIcon(div_icon_33428d925a7d84e8551a7b29fdf5ed29);
+        
+    
+        var popup_a7ee915971b65707ed247796b0b12978 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8e83aedd7b48f2a37d582402c185b091 = $(`<div id="html_8e83aedd7b48f2a37d582402c185b091" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TERRENI Maria Domenica</b><br>         Nascita: Calcinaia<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_a7ee915971b65707ed247796b0b12978.setContent(html_8e83aedd7b48f2a37d582402c185b091);
+            
+        
+
+        marker_6cacdcf70e34b42beee13512f8f343ea.bindPopup(popup_a7ee915971b65707ed247796b0b12978)
+        ;
+
+        
+    
+    
+            var marker_8a5a409729acbe3f18592894c1149544 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_2f2be795dd2743731f71122da3499d83 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_8a5a409729acbe3f18592894c1149544.setIcon(div_icon_2f2be795dd2743731f71122da3499d83);
+        
+    
+        var popup_3c413852c5a246dc6b157c174e3df62f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cf1517afc55151d14b51e47def33ce9c = $(`<div id="html_cf1517afc55151d14b51e47def33ce9c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BACCI Luigi Bernardo</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36256746/0J1gA2d" target="_blank">62</a><br>         Data: 1814-07-21         </div>         </div>`)[0];
+                popup_3c413852c5a246dc6b157c174e3df62f.setContent(html_cf1517afc55151d14b51e47def33ce9c);
+            
+        
+
+        marker_8a5a409729acbe3f18592894c1149544.bindPopup(popup_3c413852c5a246dc6b157c174e3df62f)
+        ;
+
+        
+    
+    
+            var marker_bd8aa5f0b3acebd1339a7d2d2e83744d = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_bfee9d9b594d1b9f4b37d079c7c53f20 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_bd8aa5f0b3acebd1339a7d2d2e83744d.setIcon(div_icon_bfee9d9b594d1b9f4b37d079c7c53f20);
+        
+    
+        var popup_034f163afe7019c26d5ab38e348acbeb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_22813daceb1498f312b729102697e864 = $(`<div id="html_22813daceb1498f312b729102697e864" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BERNARDINI Maria Rosa</b><br>         Nascita: Buti<br>         Num. <a href="" target="_blank"></a><br>         Data: 1815         </div>         </div>`)[0];
+                popup_034f163afe7019c26d5ab38e348acbeb.setContent(html_22813daceb1498f312b729102697e864);
+            
+        
+
+        marker_bd8aa5f0b3acebd1339a7d2d2e83744d.bindPopup(popup_034f163afe7019c26d5ab38e348acbeb)
+        ;
+
+        
+    
+    
+            var marker_97120ae94e86a80f249832c2b14eb838 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_52b6370c43f0615f5e7ddc1c255a3728 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_97120ae94e86a80f249832c2b14eb838.setIcon(div_icon_52b6370c43f0615f5e7ddc1c255a3728);
+        
+    
+        var popup_2996334dd77811a3ad06173833cb70d6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bba74390587049b6360e48fc59dd9b39 = $(`<div id="html_bba74390587049b6360e48fc59dd9b39" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>COSCERA Isidoro</b><br>         Nascita: Buti<br>         Num. <a href="" target="_blank"></a><br>         Data: 1803         </div>         </div>`)[0];
+                popup_2996334dd77811a3ad06173833cb70d6.setContent(html_bba74390587049b6360e48fc59dd9b39);
+            
+        
+
+        marker_97120ae94e86a80f249832c2b14eb838.bindPopup(popup_2996334dd77811a3ad06173833cb70d6)
+        ;
+
+        
+    
+    
+            var marker_6b84ffe0bee834d772e4fa974445104f = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_cedaab90592740419c0087ab5a4cee11 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_6b84ffe0bee834d772e4fa974445104f.setIcon(div_icon_cedaab90592740419c0087ab5a4cee11);
+        
+    
+        var popup_ae45d277364197a319c6b0130194a49a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1bdfe8c5fa53b794a1fae82226593ba8 = $(`<div id="html_1bdfe8c5fa53b794a1fae82226593ba8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PARENTI Irene</b><br>         Nascita: Buti<br>         Num. <a href="" target="_blank"></a><br>         Data: 1804         </div>         </div>`)[0];
+                popup_ae45d277364197a319c6b0130194a49a.setContent(html_1bdfe8c5fa53b794a1fae82226593ba8);
+            
+        
+
+        marker_6b84ffe0bee834d772e4fa974445104f.bindPopup(popup_ae45d277364197a319c6b0130194a49a)
+        ;
+
+        
+    
+    
+            var marker_62ae532ac93784a2afa164005850ea00 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_0fe045bc8f3c301451b1f11165f13d16 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_62ae532ac93784a2afa164005850ea00.setIcon(div_icon_0fe045bc8f3c301451b1f11165f13d16);
+        
+    
+        var popup_87511c26617b25275bb161a07a0c4e39 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a9c22c0069562597da4766631c43cd1b = $(`<div id="html_a9c22c0069562597da4766631c43cd1b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PETROGNANI Sabatino</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36255508/5YjMrPl" target="_blank">65</a><br>         Data: 1812-09-20         </div>         </div>`)[0];
+                popup_87511c26617b25275bb161a07a0c4e39.setContent(html_a9c22c0069562597da4766631c43cd1b);
+            
+        
+
+        marker_62ae532ac93784a2afa164005850ea00.bindPopup(popup_87511c26617b25275bb161a07a0c4e39)
+        ;
+
+        
+    
+    
+            var marker_b68d3dedf57b3e4e1241c38e65630734 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_19781d82c29f6cd72ab429ed1903e27c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_b68d3dedf57b3e4e1241c38e65630734.setIcon(div_icon_19781d82c29f6cd72ab429ed1903e27c);
+        
+    
+        var popup_17de870674e75cc833ca7350e6ce8b71 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_241853f33a020fa4f7d246a274f3700f = $(`<div id="html_241853f33a020fa4f7d246a274f3700f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BERTI Maria Francesca</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36255996/wkqorkA" target="_blank">36</a><br>         Data: 1813-07-23         </div>         </div>`)[0];
+                popup_17de870674e75cc833ca7350e6ce8b71.setContent(html_241853f33a020fa4f7d246a274f3700f);
+            
+        
+
+        marker_b68d3dedf57b3e4e1241c38e65630734.bindPopup(popup_17de870674e75cc833ca7350e6ce8b71)
+        ;
+
+        
+    
+    
+            var marker_4bcfb9bdd2f86bf63241cc2075e136a5 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_95a376d90ded4258d3e4609070d7357e = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_4bcfb9bdd2f86bf63241cc2075e136a5.setIcon(div_icon_95a376d90ded4258d3e4609070d7357e);
+        
+    
+        var popup_5d350a021e699edfdbaa409c3387be29 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c1a129eca647ee6b6a5fdcbf060236d3 = $(`<div id="html_c1a129eca647ee6b6a5fdcbf060236d3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CIAMPI Valentino</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36221626/wkqMMKr" target="_blank">6</a><br>         Data: 1817-01-08         </div>         </div>`)[0];
+                popup_5d350a021e699edfdbaa409c3387be29.setContent(html_c1a129eca647ee6b6a5fdcbf060236d3);
+            
+        
+
+        marker_4bcfb9bdd2f86bf63241cc2075e136a5.bindPopup(popup_5d350a021e699edfdbaa409c3387be29)
+        ;
+
+        
+    
+    
+            var marker_15ec9c66078e79fe99a4b34f3833b451 = L.marker(
+                [43.7273019, 10.5877174],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_e9274e22bf2c820494ba3e894fdf4fea = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_15ec9c66078e79fe99a4b34f3833b451.setIcon(div_icon_e9274e22bf2c820494ba3e894fdf4fea);
+        
+    
+        var popup_ff5b6688985603817eb042f4c282b66c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1ed01f83b43cc01af067ee013bf211b4 = $(`<div id="html_1ed01f83b43cc01af067ee013bf211b4" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CATUREGLI Maria Anna Carolina</b><br>         Nascita: Buti<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36239310/5V7WqmP" target="_blank">261</a><br>         Data: 1819-10-11         </div>         </div>`)[0];
+                popup_ff5b6688985603817eb042f4c282b66c.setContent(html_1ed01f83b43cc01af067ee013bf211b4);
+            
+        
+
+        marker_15ec9c66078e79fe99a4b34f3833b451.bindPopup(popup_ff5b6688985603817eb042f4c282b66c)
+        ;
+
+        
+    
+    
+            var marker_3021f2d0b353b899645c27ef73162024 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_63d93b279a056218eb50c8c9dd233aae = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3021f2d0b353b899645c27ef73162024.setIcon(div_icon_63d93b279a056218eb50c8c9dd233aae);
+        
+    
+        var popup_1c288e7e46f2f7430a7a7b85b7a158d8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7d57a299418d5b7f054fd1ce11399471 = $(`<div id="html_7d57a299418d5b7f054fd1ce11399471" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TEMPESTINI Marco</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_1c288e7e46f2f7430a7a7b85b7a158d8.setContent(html_7d57a299418d5b7f054fd1ce11399471);
+            
+        
+
+        marker_3021f2d0b353b899645c27ef73162024.bindPopup(popup_1c288e7e46f2f7430a7a7b85b7a158d8)
+        ;
+
+        
+    
+    
+            var marker_39883d4a3c43b98f23324169dbc43f2a = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_e9cc3d5c458ae7798e2a3efb64d4aec2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_39883d4a3c43b98f23324169dbc43f2a.setIcon(div_icon_e9cc3d5c458ae7798e2a3efb64d4aec2);
+        
+    
+        var popup_c27f06b5685c45d10b9056935760af4c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ed90345460fc125387c1aec776a433be = $(`<div id="html_ed90345460fc125387c1aec776a433be" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BOLDRINI Violante</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_c27f06b5685c45d10b9056935760af4c.setContent(html_ed90345460fc125387c1aec776a433be);
+            
+        
+
+        marker_39883d4a3c43b98f23324169dbc43f2a.bindPopup(popup_c27f06b5685c45d10b9056935760af4c)
+        ;
+
+        
+    
+    
+            var marker_c059966f36a6d8e756125e892158e52f = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_b2c724424d5fab9497974742ea624af2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_c059966f36a6d8e756125e892158e52f.setIcon(div_icon_b2c724424d5fab9497974742ea624af2);
+        
+    
+        var popup_61b6074bb045e70199cc5f648bbf5b61 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c0a91303edd1aad662a62d78d9c54d8b = $(`<div id="html_c0a91303edd1aad662a62d78d9c54d8b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BANCHINI Amato</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_61b6074bb045e70199cc5f648bbf5b61.setContent(html_c0a91303edd1aad662a62d78d9c54d8b);
+            
+        
+
+        marker_c059966f36a6d8e756125e892158e52f.bindPopup(popup_61b6074bb045e70199cc5f648bbf5b61)
+        ;
+
+        
+    
+    
+            var marker_154f9a91cab5f93ceda60a3cb7d146b9 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_9f196d5f240f58186bca8dc376abe0d3 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_154f9a91cab5f93ceda60a3cb7d146b9.setIcon(div_icon_9f196d5f240f58186bca8dc376abe0d3);
+        
+    
+        var popup_ff5e2d30b74ed63d139516ea1db44410 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2d1bb35570b7f0cd18d9ae238275c4bd = $(`<div id="html_2d1bb35570b7f0cd18d9ae238275c4bd" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GUERRAZZI Assunta</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_ff5e2d30b74ed63d139516ea1db44410.setContent(html_2d1bb35570b7f0cd18d9ae238275c4bd);
+            
+        
+
+        marker_154f9a91cab5f93ceda60a3cb7d146b9.bindPopup(popup_ff5e2d30b74ed63d139516ea1db44410)
+        ;
+
+        
+    
+    
+            var marker_6c129ce723bdb723b6089cf7a314e2e6 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_7e4c4aa871e5175d3ad501e7463a4eee = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_6c129ce723bdb723b6089cf7a314e2e6.setIcon(div_icon_7e4c4aa871e5175d3ad501e7463a4eee);
+        
+    
+        var popup_cf0b930560ddb27103ffe4a5eba436da = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_20c25b6bf5939279fe595bec600e2942 = $(`<div id="html_20c25b6bf5939279fe595bec600e2942" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TOTI Luigi</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_cf0b930560ddb27103ffe4a5eba436da.setContent(html_20c25b6bf5939279fe595bec600e2942);
+            
+        
+
+        marker_6c129ce723bdb723b6089cf7a314e2e6.bindPopup(popup_cf0b930560ddb27103ffe4a5eba436da)
+        ;
+
+        
+    
+    
+            var marker_d776fd075603583a1480a027546fef26 = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_e0ee8244f3395329ecd06e407601d456 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_d776fd075603583a1480a027546fef26.setIcon(div_icon_e0ee8244f3395329ecd06e407601d456);
+        
+    
+        var popup_eff73b37be37ae75b04b99f32e14f5c5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c0c78076b531d1677d52fb0027a41cdd = $(`<div id="html_c0c78076b531d1677d52fb0027a41cdd" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MELANI Agostina</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_eff73b37be37ae75b04b99f32e14f5c5.setContent(html_c0c78076b531d1677d52fb0027a41cdd);
+            
+        
+
+        marker_d776fd075603583a1480a027546fef26.bindPopup(popup_eff73b37be37ae75b04b99f32e14f5c5)
+        ;
+
+        
+    
+    
+            var marker_7bb4d29457ae942f3548ff173f00592f = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_ff71fd412023770c7aea8da4914515ab = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_7bb4d29457ae942f3548ff173f00592f.setIcon(div_icon_ff71fd412023770c7aea8da4914515ab);
+        
+    
+        var popup_3d45b12c28a0f931f65bd62d4356a0d4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_481241f4f6e2f47ba3a9c6e300af9310 = $(`<div id="html_481241f4f6e2f47ba3a9c6e300af9310" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MONTAGNI Pietro</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_3d45b12c28a0f931f65bd62d4356a0d4.setContent(html_481241f4f6e2f47ba3a9c6e300af9310);
+            
+        
+
+        marker_7bb4d29457ae942f3548ff173f00592f.bindPopup(popup_3d45b12c28a0f931f65bd62d4356a0d4)
+        ;
+
+        
+    
+    
+            var marker_4d25159f28b16915ba798b3186b61bfc = L.marker(
+                [43.6980639, 10.6929976],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_73637b63c6c5d4e1138dace809db9b9a = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_4d25159f28b16915ba798b3186b61bfc.setIcon(div_icon_73637b63c6c5d4e1138dace809db9b9a);
+        
+    
+        var popup_bff60dd8b5b4fd4951512586b7f212bb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cbe5bbef20659f23b8a586a5c33c0b58 = $(`<div id="html_cbe5bbef20659f23b8a586a5c33c0b58" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PUCCINELLI Rosa</b><br>         Nascita: Santa Maria a Monte<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_bff60dd8b5b4fd4951512586b7f212bb.setContent(html_cbe5bbef20659f23b8a586a5c33c0b58);
+            
+        
+
+        marker_4d25159f28b16915ba798b3186b61bfc.bindPopup(popup_bff60dd8b5b4fd4951512586b7f212bb)
+        ;
+
+        
+    
+    
+            var marker_3c13f8bfd48732cb4edc8b9e79b05a98 = L.marker(
+                [43.8202285, 10.6565212],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_3bb793a3bec4b8fa3682f603b989a528 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3c13f8bfd48732cb4edc8b9e79b05a98.setIcon(div_icon_3bb793a3bec4b8fa3682f603b989a528);
+        
+    
+        var popup_cf7c1337591c2e1df0f60c11c610e88c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dfbbd6eeee10150dfe2f495bc93c26df = $(`<div id="html_dfbbd6eeee10150dfe2f495bc93c26df" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>DELLA MAGGIORA Andrea</b><br>         Nascita: Badia Pozzeveri, Altopascio<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_cf7c1337591c2e1df0f60c11c610e88c.setContent(html_dfbbd6eeee10150dfe2f495bc93c26df);
+            
+        
+
+        marker_3c13f8bfd48732cb4edc8b9e79b05a98.bindPopup(popup_cf7c1337591c2e1df0f60c11c610e88c)
+        ;
+
+        
+    
+    
+            var marker_7875caf6fbfff2a1034285942d857543 = L.marker(
+                [43.8202285, 10.6565212],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_6b226c3fb4ee9d50f107f38fbc830787 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_7875caf6fbfff2a1034285942d857543.setIcon(div_icon_6b226c3fb4ee9d50f107f38fbc830787);
+        
+    
+        var popup_025238414feb8ec6ee182a7e007dc423 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d5193e5a56c87d6262a77e6626aeafc2 = $(`<div id="html_d5193e5a56c87d6262a77e6626aeafc2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>DEL CARLO Virginia</b><br>         Nascita: Badia Pozzeveri, Altopascio<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_025238414feb8ec6ee182a7e007dc423.setContent(html_d5193e5a56c87d6262a77e6626aeafc2);
+            
+        
+
+        marker_7875caf6fbfff2a1034285942d857543.bindPopup(popup_025238414feb8ec6ee182a7e007dc423)
+        ;
+
+        
+    
+    
+            var marker_ce461021e96586c06a99e338ce112a87 = L.marker(
+                [43.8202285, 10.6565212],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_415dba96970c6b20d2e749be6e290b2b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_ce461021e96586c06a99e338ce112a87.setIcon(div_icon_415dba96970c6b20d2e749be6e290b2b);
+        
+    
+        var popup_da002157f0de2866101e5cf7dfb49d4e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1f3fabea90d11448729ba410c0230b76 = $(`<div id="html_1f3fabea90d11448729ba410c0230b76" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MALANCA Angelo</b><br>         Nascita: Badia Pozzeveri, Altopascio<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_da002157f0de2866101e5cf7dfb49d4e.setContent(html_1f3fabea90d11448729ba410c0230b76);
+            
+        
+
+        marker_ce461021e96586c06a99e338ce112a87.bindPopup(popup_da002157f0de2866101e5cf7dfb49d4e)
+        ;
+
+        
+    
+    
+            var marker_4211fde6ef18981caf50ced4551de469 = L.marker(
+                [43.8202285, 10.6565212],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_302de5edc149e2a91660938d855fdbb5 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_4211fde6ef18981caf50ced4551de469.setIcon(div_icon_302de5edc149e2a91660938d855fdbb5);
+        
+    
+        var popup_a9ec5268c56c3372bc9464aa77fb895c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_77ff10ac8bbc4180767f3b7ff4fda505 = $(`<div id="html_77ff10ac8bbc4180767f3b7ff4fda505" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FREDIANELLI Liberata</b><br>         Nascita: Badia Pozzeveri, Altopascio<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_a9ec5268c56c3372bc9464aa77fb895c.setContent(html_77ff10ac8bbc4180767f3b7ff4fda505);
+            
+        
+
+        marker_4211fde6ef18981caf50ced4551de469.bindPopup(popup_a9ec5268c56c3372bc9464aa77fb895c)
+        ;
+
+        
+    
+    
+            var marker_34dafe8e138ae0fa2be8a6e4629afd77 = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_0927e941c5c8940f8edc35924ad6665f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_34dafe8e138ae0fa2be8a6e4629afd77.setIcon(div_icon_0927e941c5c8940f8edc35924ad6665f);
+        
+    
+        var popup_2357fbfb95add0f4eb60a73d4562a72c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5b0c36f50c66761ff41f3d0bff9b654b = $(`<div id="html_5b0c36f50c66761ff41f3d0bff9b654b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>ORLANDI Benedetto</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_2357fbfb95add0f4eb60a73d4562a72c.setContent(html_5b0c36f50c66761ff41f3d0bff9b654b);
+            
+        
+
+        marker_34dafe8e138ae0fa2be8a6e4629afd77.bindPopup(popup_2357fbfb95add0f4eb60a73d4562a72c)
+        ;
+
+        
+    
+    
+            var marker_c8e58b89d72f9cc7b64bb4e391141a47 = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_0df3ca9d5cbb87abdacce70b1ac8b2d2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_c8e58b89d72f9cc7b64bb4e391141a47.setIcon(div_icon_0df3ca9d5cbb87abdacce70b1ac8b2d2);
+        
+    
+        var popup_3f3e0eeb7c4b1f78b67eac3d32ce0dea = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5df84706c3dca78b90d54ec5eba03766 = $(`<div id="html_5df84706c3dca78b90d54ec5eba03766" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GIANNINI Filomena</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_3f3e0eeb7c4b1f78b67eac3d32ce0dea.setContent(html_5df84706c3dca78b90d54ec5eba03766);
+            
+        
+
+        marker_c8e58b89d72f9cc7b64bb4e391141a47.bindPopup(popup_3f3e0eeb7c4b1f78b67eac3d32ce0dea)
+        ;
+
+        
+    
+    
+            var marker_af8bf13e9a0b67976a5e5805e75be8ea = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_7582750fdf1ec586cfe0524aac284653 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_af8bf13e9a0b67976a5e5805e75be8ea.setIcon(div_icon_7582750fdf1ec586cfe0524aac284653);
+        
+    
+        var popup_98d296d4e14e339a88a8f15d409de40d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_991988ca3fefad4fb1fd28ec5691f10a = $(`<div id="html_991988ca3fefad4fb1fd28ec5691f10a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BERTUCCELLI Michele</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_98d296d4e14e339a88a8f15d409de40d.setContent(html_991988ca3fefad4fb1fd28ec5691f10a);
+            
+        
+
+        marker_af8bf13e9a0b67976a5e5805e75be8ea.bindPopup(popup_98d296d4e14e339a88a8f15d409de40d)
+        ;
+
+        
+    
+    
+            var marker_3f2bb86ada37558feb520da19809ee1b = L.marker(
+                [43.8315666, 10.604369],
+                {
+}
+            ).addTo(marker_cluster_faf21f9007186716cad5259ad477e3c3);
+        
+    
+            var div_icon_218e36ce9d883d7722b178e47ec525d8 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3f2bb86ada37558feb520da19809ee1b.setIcon(div_icon_218e36ce9d883d7722b178e47ec525d8);
+        
+    
+        var popup_1f3967bdb0450f9737d066b077d6590a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_efe65e03d1a91e8df31d2fab4bc7ad3e = $(`<div id="html_efe65e03d1a91e8df31d2fab4bc7ad3e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BIANCHI Maria Domenica</b><br>         Nascita: Porcari, Capannori<br>         Num. <a href="" target="_blank"></a><br>         Data:          </div>         </div>`)[0];
+                popup_1f3967bdb0450f9737d066b077d6590a.setContent(html_efe65e03d1a91e8df31d2fab4bc7ad3e);
+            
+        
+
+        marker_3f2bb86ada37558feb520da19809ee1b.bindPopup(popup_1f3967bdb0450f9737d066b077d6590a)
+        ;
+
+        
+    
+    
+            marker_cluster_faf21f9007186716cad5259ad477e3c3.addTo(feature_group_5a2d8ceaec562da5de58742dffb41daa);
+        
+    
+            feature_group_5a2d8ceaec562da5de58742dffb41daa.addTo(map_fed38e62423140adeb570a40772975e3);
+        
+    
+            var layer_control_2a6aa7bd18be1d53e50041233d0bd62d_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_f6645384640d42e7f000a11718a2cefe,
+                },
+                overlays :  {
+                    "Heatmap nascite" : feature_group_ca7ac1d11ec15fca159db46dea8441d8,
+                    "Persone (spiderfy)" : feature_group_5a2d8ceaec562da5de58742dffb41daa,
+                },
+            };
+            let layer_control_2a6aa7bd18be1d53e50041233d0bd62d = L.control.layers(
+                layer_control_2a6aa7bd18be1d53e50041233d0bd62d_layers.base_layers,
+                layer_control_2a6aa7bd18be1d53e50041233d0bd62d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_fed38e62423140adeb570a40772975e3);
+
+        
+</script>
+</html>
