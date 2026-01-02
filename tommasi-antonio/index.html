@@ -1,1 +1,1410 @@
-<html></html>
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_70be4e1019319961dd9790f16e8d9325 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_70be4e1019319961dd9790f16e8d9325" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_70be4e1019319961dd9790f16e8d9325 = L.map(
+                "map_70be4e1019319961dd9790f16e8d9325",
+                {
+                    center: [43.9708424, 10.230725900000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_45b15643c9a20e22770e542ed75d9b9b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_45b15643c9a20e22770e542ed75d9b9b.addTo(map_70be4e1019319961dd9790f16e8d9325);
+        
+    
+            var feature_group_9000a67fe785976a02b06b450c430fce = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_3525d31e4cbd145b56af7d55b9673230 = L.heatLayer(
+                [[43.9589031, 10.2332031, 4], [43.9589031, 10.2332031, 33], [43.994721, 10.2257715, 1]],
+                {
+  "minOpacity": 0.25,
+  "maxZoom": 12,
+  "radius": 25,
+  "blur": 18,
+}
+            );
+        
+    
+            heat_map_3525d31e4cbd145b56af7d55b9673230.addTo(feature_group_9000a67fe785976a02b06b450c430fce);
+        
+    
+            feature_group_9000a67fe785976a02b06b450c430fce.addTo(map_70be4e1019319961dd9790f16e8d9325);
+        
+    
+            var feature_group_2d8d74b599c31b8a1db661a99311851a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_e5a4006da39a1bcb610c29abdb5db57b = L.markerClusterGroup(
+                {
+  "spiderfyOnMaxZoom": true,
+  "showCoverageOnHover": false,
+  "zoomToBoundsOnClick": true,
+  "disableClusteringAtZoom": 18,
+}
+            );
+        
+    
+            var marker_79ed48270db13efd3360c16f7d1fb727 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_e390440cc2f8d8af2f26cc1aaaf49987 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_79ed48270db13efd3360c16f7d1fb727.setIcon(div_icon_e390440cc2f8d8af2f26cc1aaaf49987);
+        
+    
+        var popup_5c10bc19ea65ba89cfbaecabcb3ee53b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f8293bee8a38d2c674f1f045386a001b = $(`<div id="html_f8293bee8a38d2c674f1f045386a001b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TOMMASI Antonio</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1961-06-13         </div>         </div>`)[0];
+                popup_5c10bc19ea65ba89cfbaecabcb3ee53b.setContent(html_f8293bee8a38d2c674f1f045386a001b);
+            
+        
+
+        marker_79ed48270db13efd3360c16f7d1fb727.bindPopup(popup_5c10bc19ea65ba89cfbaecabcb3ee53b)
+        ;
+
+        
+    
+    
+            var marker_253997335fdb9a5fb2e866d8e6980069 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_23acf21ccd1d61404d21b284ec5c22af = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_253997335fdb9a5fb2e866d8e6980069.setIcon(div_icon_23acf21ccd1d61404d21b284ec5c22af);
+        
+    
+        var popup_819935fb03a76e212bb3b35bbaac0d20 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b7604dffc4f4306542b7ddf33711ba6b = $(`<div id="html_b7604dffc4f4306542b7ddf33711ba6b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TOMMASI Paolo</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1930-05-06         </div>         </div>`)[0];
+                popup_819935fb03a76e212bb3b35bbaac0d20.setContent(html_b7604dffc4f4306542b7ddf33711ba6b);
+            
+        
+
+        marker_253997335fdb9a5fb2e866d8e6980069.bindPopup(popup_819935fb03a76e212bb3b35bbaac0d20)
+        ;
+
+        
+    
+    
+            var marker_09b429fca05116f4001657c7038e3804 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_ac7e760e3103c7df7a01f2176935bda8 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_09b429fca05116f4001657c7038e3804.setIcon(div_icon_ac7e760e3103c7df7a01f2176935bda8);
+        
+    
+        var popup_887d510579c55dc63d261999b72c07e8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f1c41cd40b2ee72cdf7bf470b5a7ccc5 = $(`<div id="html_f1c41cd40b2ee72cdf7bf470b5a7ccc5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BRESCIANI Marta</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1934-09-06         </div>         </div>`)[0];
+                popup_887d510579c55dc63d261999b72c07e8.setContent(html_f1c41cd40b2ee72cdf7bf470b5a7ccc5);
+            
+        
+
+        marker_09b429fca05116f4001657c7038e3804.bindPopup(popup_887d510579c55dc63d261999b72c07e8)
+        ;
+
+        
+    
+    
+            var marker_80c4bb545ab294ed2834d4f971686730 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_34b0be40b6fa3cbd8542acfe20542975 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_80c4bb545ab294ed2834d4f971686730.setIcon(div_icon_34b0be40b6fa3cbd8542acfe20542975);
+        
+    
+        var popup_1300d628e0098031f7ee79bbafe138d8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fc766609f2cef903d0bb85e5bce2e309 = $(`<div id="html_fc766609f2cef903d0bb85e5bce2e309" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>TOMMASI Leone</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-99WQ-5WX2?i=1995&cc=2043811" target="_blank">275</a><br>         Data: 1903-07-23         </div>         </div>`)[0];
+                popup_1300d628e0098031f7ee79bbafe138d8.setContent(html_fc766609f2cef903d0bb85e5bce2e309);
+            
+        
+
+        marker_80c4bb545ab294ed2834d4f971686730.bindPopup(popup_1300d628e0098031f7ee79bbafe138d8)
+        ;
+
+        
+    
+    
+            var marker_4b9db90550d5be9801159e68b5297a4f = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_bc3dab14c169c635c486f2af27a92e97 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_4b9db90550d5be9801159e68b5297a4f.setIcon(div_icon_bc3dab14c169c635c486f2af27a92e97);
+        
+    
+        var popup_e01625a52a8932c0a5b6a023b25a1ec8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e52d66638e139f375ab8651b2784a023 = $(`<div id="html_e52d66638e139f375ab8651b2784a023" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRONI Carolina</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-99WQ-546K?i=1664&cc=2043811" target="_blank">438</a><br>         Data: 1901-12-28         </div>         </div>`)[0];
+                popup_e01625a52a8932c0a5b6a023b25a1ec8.setContent(html_e52d66638e139f375ab8651b2784a023);
+            
+        
+
+        marker_4b9db90550d5be9801159e68b5297a4f.bindPopup(popup_e01625a52a8932c0a5b6a023b25a1ec8)
+        ;
+
+        
+    
+    
+            var marker_6c75750aa67b71231a9eb14b3ea3386a = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_317100704b886d80245362a66aae8de5 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_6c75750aa67b71231a9eb14b3ea3386a.setIcon(div_icon_317100704b886d80245362a66aae8de5);
+        
+    
+        var popup_7c6b9d6e1baddd5958f438bffcc77e2e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9bfe7febd867a856cef2a4e14bbbcc47 = $(`<div id="html_9bfe7febd867a856cef2a4e14bbbcc47" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BRESCIANI Giovanni</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-99WQ-568H?i=2890&cc=2043811" target="_blank">380</a><br>         Data: 1907-10-08         </div>         </div>`)[0];
+                popup_7c6b9d6e1baddd5958f438bffcc77e2e.setContent(html_9bfe7febd867a856cef2a4e14bbbcc47);
+            
+        
+
+        marker_6c75750aa67b71231a9eb14b3ea3386a.bindPopup(popup_7c6b9d6e1baddd5958f438bffcc77e2e)
+        ;
+
+        
+    
+    
+            var marker_e87bc7bd9803cc83a732565549c62cc1 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_2f11634a715c03bafb6b87479c90f665 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_e87bc7bd9803cc83a732565549c62cc1.setIcon(div_icon_2f11634a715c03bafb6b87479c90f665);
+        
+    
+        var popup_b415c9667d3c13954b2021e7bfb08854 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bdc992fd6561a1e6319d2e70ff647bdd = $(`<div id="html_bdc992fd6561a1e6319d2e70ff647bdd" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BALDUINI Alberta</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1912-07-28         </div>         </div>`)[0];
+                popup_b415c9667d3c13954b2021e7bfb08854.setContent(html_bdc992fd6561a1e6319d2e70ff647bdd);
+            
+        
+
+        marker_e87bc7bd9803cc83a732565549c62cc1.bindPopup(popup_b415c9667d3c13954b2021e7bfb08854)
+        ;
+
+        
+    
+    
+            var marker_b703bb38fa425f25b3967b02b4596a1c = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_eed841bdc72385b73d53b25a978600b0 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_b703bb38fa425f25b3967b02b4596a1c.setIcon(div_icon_eed841bdc72385b73d53b25a978600b0);
+        
+    
+        var popup_4c93733f22171fb8d1fc16d8888b9128 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c28c008f71c1215dd9d92ff66aa46c00 = $(`<div id="html_c28c008f71c1215dd9d92ff66aa46c00" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRETTI Leonilda Sofia (Ester)</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-89W7-JH26?i=991&cc=2043811" target="_blank">306</a><br>         Data: 1870-08-08         </div>         </div>`)[0];
+                popup_4c93733f22171fb8d1fc16d8888b9128.setContent(html_c28c008f71c1215dd9d92ff66aa46c00);
+            
+        
+
+        marker_b703bb38fa425f25b3967b02b4596a1c.bindPopup(popup_4c93733f22171fb8d1fc16d8888b9128)
+        ;
+
+        
+    
+    
+            var marker_85cfef4ab8f1ce9da15142e9d903c6db = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_63207a879fa7ebad216c816c89cc9687 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_85cfef4ab8f1ce9da15142e9d903c6db.setIcon(div_icon_63207a879fa7ebad216c816c89cc9687);
+        
+    
+        var popup_61b9e2dc20e364731341fad83549992f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4499af8a6bceca73346486ef7db6e399 = $(`<div id="html_4499af8a6bceca73346486ef7db6e399" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRONI Gaetano Pio Antonio</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36241691/0n1qKN9" target="_blank">363</a><br>         Data: 1864-11-10         </div>         </div>`)[0];
+                popup_61b9e2dc20e364731341fad83549992f.setContent(html_4499af8a6bceca73346486ef7db6e399);
+            
+        
+
+        marker_85cfef4ab8f1ce9da15142e9d903c6db.bindPopup(popup_61b9e2dc20e364731341fad83549992f)
+        ;
+
+        
+    
+    
+            var marker_a0ae61f9fc5d518e572570cefc430acd = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_c7d5b250f051bef4f079fc4222c29fbf = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_a0ae61f9fc5d518e572570cefc430acd.setIcon(div_icon_c7d5b250f051bef4f079fc4222c29fbf);
+        
+    
+        var popup_1f1314ce243a1b1d449e6636bd460a49 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4c3ba30a5a2f4d0ff6430825af12c791 = $(`<div id="html_4c3ba30a5a2f4d0ff6430825af12c791" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GARIBALDI Annita</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9W7-JHM1?i=1901&cc=2043811" target="_blank">287</a><br>         Data: 1874-07-26         </div>         </div>`)[0];
+                popup_1f1314ce243a1b1d449e6636bd460a49.setContent(html_4c3ba30a5a2f4d0ff6430825af12c791);
+            
+        
+
+        marker_a0ae61f9fc5d518e572570cefc430acd.bindPopup(popup_1f1314ce243a1b1d449e6636bd460a49)
+        ;
+
+        
+    
+    
+            var marker_383432f3140b373cc87836b543982ee7 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_ae338df5ccb9501183984a79399103d9 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_383432f3140b373cc87836b543982ee7.setIcon(div_icon_ae338df5ccb9501183984a79399103d9);
+        
+    
+        var popup_695219e578ae30256b97f6b0db8dc298 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_63ac186a86403a723a69e4a71e11785b = $(`<div id="html_63ac186a86403a723a69e4a71e11785b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BRESCIANI Giuseppe</b><br>         Nascita: Capezzano Monte, Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-L9W7-J3ZP?i=2666&cc=2043811" target="_blank">224</a><br>         Data: 1878-06-06         </div>         </div>`)[0];
+                popup_695219e578ae30256b97f6b0db8dc298.setContent(html_63ac186a86403a723a69e4a71e11785b);
+            
+        
+
+        marker_383432f3140b373cc87836b543982ee7.bindPopup(popup_695219e578ae30256b97f6b0db8dc298)
+        ;
+
+        
+    
+    
+            var marker_79def5ff9ec27c47dd90c6647be210ee = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_1e4a863aea09a6c16c99daca9b455bec = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_79def5ff9ec27c47dd90c6647be210ee.setIcon(div_icon_1e4a863aea09a6c16c99daca9b455bec);
+        
+    
+        var popup_faf57af239eb5e725c6e39b850823eca = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b846939310def6841f9abea4fa6d2669 = $(`<div id="html_b846939310def6841f9abea4fa6d2669" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PACINI Emilia</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QS7-89W7-WWW4?i=653&cc=2043811" target="_blank">142</a><br>         Data: 1883-04-11         </div>         </div>`)[0];
+                popup_faf57af239eb5e725c6e39b850823eca.setContent(html_b846939310def6841f9abea4fa6d2669);
+            
+        
+
+        marker_79def5ff9ec27c47dd90c6647be210ee.bindPopup(popup_faf57af239eb5e725c6e39b850823eca)
+        ;
+
+        
+    
+    
+            var marker_761f999268720745df1c5857269cb76b = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_93ba5750bdc735fd5b884734ea2de6c1 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_761f999268720745df1c5857269cb76b.setIcon(div_icon_93ba5750bdc735fd5b884734ea2de6c1);
+        
+    
+        var popup_26c61ff025d9f8c61f17cd3fb3683346 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f3bfd2d4d53ef544777dcd7c9539d613 = $(`<div id="html_f3bfd2d4d53ef544777dcd7c9539d613" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BALDUINI Ugo</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9W7-WQVL?view=index&groupId=M97N-TRY" target="_blank">425</a><br>         Data: 1885-09-12         </div>         </div>`)[0];
+                popup_26c61ff025d9f8c61f17cd3fb3683346.setContent(html_f3bfd2d4d53ef544777dcd7c9539d613);
+            
+        
+
+        marker_761f999268720745df1c5857269cb76b.bindPopup(popup_26c61ff025d9f8c61f17cd3fb3683346)
+        ;
+
+        
+    
+    
+            var marker_2436edcbe88ac1d389d3426a60e22035 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_319bb457d192ccac6f9d135c05e151a1 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_2436edcbe88ac1d389d3426a60e22035.setIcon(div_icon_319bb457d192ccac6f9d135c05e151a1);
+        
+    
+        var popup_ebb9b281a785b80b7f42ae4569a4b0b6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_41acb44d85ed25651722da4c96613051 = $(`<div id="html_41acb44d85ed25651722da4c96613051" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRETTI Angiolo</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36226700/wlP9QEW" target="_blank">93</a><br>         Data: 1842-03-24         </div>         </div>`)[0];
+                popup_ebb9b281a785b80b7f42ae4569a4b0b6.setContent(html_41acb44d85ed25651722da4c96613051);
+            
+        
+
+        marker_2436edcbe88ac1d389d3426a60e22035.bindPopup(popup_ebb9b281a785b80b7f42ae4569a4b0b6)
+        ;
+
+        
+    
+    
+            var marker_9dd9f639d13417eb6ad1c4210d91374a = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_82fdcfd93a1494cd36c82a8e755801e6 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_9dd9f639d13417eb6ad1c4210d91374a.setIcon(div_icon_82fdcfd93a1494cd36c82a8e755801e6);
+        
+    
+        var popup_52c18ca99476bb0b67314d59a245475b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d618ab90a7cdf2d7940718a6b1c1f2f0 = $(`<div id="html_d618ab90a7cdf2d7940718a6b1c1f2f0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BARSANTI Maria Penelope</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36226948/04DOBgZ" target="_blank">45</a><br>         Data: 1843-02-23         </div>         </div>`)[0];
+                popup_52c18ca99476bb0b67314d59a245475b.setContent(html_d618ab90a7cdf2d7940718a6b1c1f2f0);
+            
+        
+
+        marker_9dd9f639d13417eb6ad1c4210d91374a.bindPopup(popup_52c18ca99476bb0b67314d59a245475b)
+        ;
+
+        
+    
+    
+            var marker_d31937ca23eb23e28eb2e5c6304e50e0 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_e03d2f7cc3f85fcbc6a34fe3d41218de = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_d31937ca23eb23e28eb2e5c6304e50e0.setIcon(div_icon_e03d2f7cc3f85fcbc6a34fe3d41218de);
+        
+    
+        var popup_e3f3b03994e4b594c00519efb33d4122 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_140292d369f8e45d36aeef3f96022a48 = $(`<div id="html_140292d369f8e45d36aeef3f96022a48" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRONI Giovanni Battista Gaetano</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36239950/LpO6Z9M" target="_blank">211</a><br>         Data: 1822-12-27         </div>         </div>`)[0];
+                popup_e3f3b03994e4b594c00519efb33d4122.setContent(html_140292d369f8e45d36aeef3f96022a48);
+            
+        
+
+        marker_d31937ca23eb23e28eb2e5c6304e50e0.bindPopup(popup_e3f3b03994e4b594c00519efb33d4122)
+        ;
+
+        
+    
+    
+            var marker_a1908e6ec2d7fb4b123c1ea3fd669019 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_1a44c0ee8ad04fd571b1f2b7800d7a80 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_a1908e6ec2d7fb4b123c1ea3fd669019.setIcon(div_icon_1a44c0ee8ad04fd571b1f2b7800d7a80);
+        
+    
+        var popup_8a330ad756b8eb915607fbbedea687a5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dde66733dc207c3dba88351404ce2d4e = $(`<div id="html_dde66733dc207c3dba88351404ce2d4e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MORICONI Eugenia</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1838         </div>         </div>`)[0];
+                popup_8a330ad756b8eb915607fbbedea687a5.setContent(html_dde66733dc207c3dba88351404ce2d4e);
+            
+        
+
+        marker_a1908e6ec2d7fb4b123c1ea3fd669019.bindPopup(popup_8a330ad756b8eb915607fbbedea687a5)
+        ;
+
+        
+    
+    
+            var marker_9ac364eb4921b75e371d86566ace9ac5 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_2dec7babc33d6dcd892c30ef9c2d5298 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_9ac364eb4921b75e371d86566ace9ac5.setIcon(div_icon_2dec7babc33d6dcd892c30ef9c2d5298);
+        
+    
+        var popup_2d3eaf62b79d9fde0b5f2af22ad458c1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e055479f9de8ea903215527161ec017a = $(`<div id="html_e055479f9de8ea903215527161ec017a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GARIBALDI Costanzo Silvestro Lorenzo</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36227443/wrNGbKG" target="_blank">19</a><br>         Data: 1844-12-31         </div>         </div>`)[0];
+                popup_2d3eaf62b79d9fde0b5f2af22ad458c1.setContent(html_e055479f9de8ea903215527161ec017a);
+            
+        
+
+        marker_9ac364eb4921b75e371d86566ace9ac5.bindPopup(popup_2d3eaf62b79d9fde0b5f2af22ad458c1)
+        ;
+
+        
+    
+    
+            var marker_fa1b49c6792ae6a332dc2d7667b6a63d = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_c7b5052e97d6459e47033d7b07f3a59f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_fa1b49c6792ae6a332dc2d7667b6a63d.setIcon(div_icon_c7b5052e97d6459e47033d7b07f3a59f);
+        
+    
+        var popup_693b2e3144d832e555c443077ba7a05e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1b6395547119bbed2a40d0d0e11bffbe = $(`<div id="html_1b6395547119bbed2a40d0d0e11bffbe" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PAPINI Maria Anna Pia</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36228184/w1Mz12p" target="_blank">109</a><br>         Data: 1848-04-21         </div>         </div>`)[0];
+                popup_693b2e3144d832e555c443077ba7a05e.setContent(html_1b6395547119bbed2a40d0d0e11bffbe);
+            
+        
+
+        marker_fa1b49c6792ae6a332dc2d7667b6a63d.bindPopup(popup_693b2e3144d832e555c443077ba7a05e)
+        ;
+
+        
+    
+    
+            var marker_d152f9ac1c31b542e287b0a5aaf84a22 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_ed7d8c9c003f23ffed1992ba500311d5 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_d152f9ac1c31b542e287b0a5aaf84a22.setIcon(div_icon_ed7d8c9c003f23ffed1992ba500311d5);
+        
+    
+        var popup_6c85a8ecd263151d45c623849ea0abeb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6e1b8ef0af47898110664ce6aa41cf19 = $(`<div id="html_6e1b8ef0af47898110664ce6aa41cf19" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BRESCIANI Stefano</b><br>         Nascita: Capezzano Monte, Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36256878/wRzN1r4" target="_blank">20</a><br>         Data: 1814-01-30         </div>         </div>`)[0];
+                popup_6c85a8ecd263151d45c623849ea0abeb.setContent(html_6e1b8ef0af47898110664ce6aa41cf19);
+            
+        
+
+        marker_d152f9ac1c31b542e287b0a5aaf84a22.bindPopup(popup_6c85a8ecd263151d45c623849ea0abeb)
+        ;
+
+        
+    
+    
+            var marker_dd3a4eb11b377b9e3b8a8a518c2e1a77 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_b2927b6fb89757c480720d9d6f879733 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_dd3a4eb11b377b9e3b8a8a518c2e1a77.setIcon(div_icon_b2927b6fb89757c480720d9d6f879733);
+        
+    
+        var popup_2516b20548a3016ae69a282104f82387 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ea245f61929114f1bbce873a2b934c01 = $(`<div id="html_ea245f61929114f1bbce873a2b934c01" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PASQUINI Maria Renilda</b><br>         Nascita: Capezzano Monte, Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36234202/0M64ZN6" target="_blank">340</a><br>         Data: 1850-12-26         </div>         </div>`)[0];
+                popup_2516b20548a3016ae69a282104f82387.setContent(html_ea245f61929114f1bbce873a2b934c01);
+            
+        
+
+        marker_dd3a4eb11b377b9e3b8a8a518c2e1a77.bindPopup(popup_2516b20548a3016ae69a282104f82387)
+        ;
+
+        
+    
+    
+            var marker_a9d920f425bc4a7e614df2ecd9363cfe = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_2be675d2b8f4fd7e9ac936029532a0e8 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_a9d920f425bc4a7e614df2ecd9363cfe.setIcon(div_icon_2be675d2b8f4fd7e9ac936029532a0e8);
+        
+    
+        var popup_2f691557cec24b0a43d91f1f0165bf5c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_39c0329db6116988414b6a5ddcedf6af = $(`<div id="html_39c0329db6116988414b6a5ddcedf6af" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MORIGLIONI Paolina Benedetta Cinzia</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36241445/wlPxkGR" target="_blank">6</a><br>         Data: 1863-01-25         </div>         </div>`)[0];
+                popup_2f691557cec24b0a43d91f1f0165bf5c.setContent(html_39c0329db6116988414b6a5ddcedf6af);
+            
+        
+
+        marker_a9d920f425bc4a7e614df2ecd9363cfe.bindPopup(popup_2f691557cec24b0a43d91f1f0165bf5c)
+        ;
+
+        
+    
+    
+            var marker_dca4b509353d4a9fe00551794ed8c0a6 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_53ada3d3669c0b2ac99709c514982186 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_dca4b509353d4a9fe00551794ed8c0a6.setIcon(div_icon_53ada3d3669c0b2ac99709c514982186);
+        
+    
+        var popup_096c5e7f1ff2e64c431a0c213100e09f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_485fe3ee4baf189419cfb4d27a479bdc = $(`<div id="html_485fe3ee4baf189419cfb4d27a479bdc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BALDUINI Guido Achille Maria</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36234681/0A8kDeb" target="_blank">210</a><br>         Data: 1852-07-21         </div>         </div>`)[0];
+                popup_096c5e7f1ff2e64c431a0c213100e09f.setContent(html_485fe3ee4baf189419cfb4d27a479bdc);
+            
+        
+
+        marker_dca4b509353d4a9fe00551794ed8c0a6.bindPopup(popup_096c5e7f1ff2e64c431a0c213100e09f)
+        ;
+
+        
+    
+    
+            var marker_32df199a7273e71dbc5601d7d2bd677a = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_e68472e2785639bff34d0cbf51e7ca09 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_32df199a7273e71dbc5601d7d2bd677a.setIcon(div_icon_e68472e2785639bff34d0cbf51e7ca09);
+        
+    
+        var popup_c1701bd979e31da5c36f0e4fdf857853 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6feebdf341fe474050a2ff2ee1724049 = $(`<div id="html_6feebdf341fe474050a2ff2ee1724049" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BARSANTI Alberta</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36233962/Lq681Rq" target="_blank">297</a><br>         Data: 1849-11-17         </div>         </div>`)[0];
+                popup_c1701bd979e31da5c36f0e4fdf857853.setContent(html_6feebdf341fe474050a2ff2ee1724049);
+            
+        
+
+        marker_32df199a7273e71dbc5601d7d2bd677a.bindPopup(popup_c1701bd979e31da5c36f0e4fdf857853)
+        ;
+
+        
+    
+    
+            var marker_beb6013db303d12b0dc11cae5b60ad69 = L.marker(
+                [43.994721, 10.2257715],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_39550fad31d1cffd5ae279a128f02718 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_beb6013db303d12b0dc11cae5b60ad69.setIcon(div_icon_39550fad31d1cffd5ae279a128f02718);
+        
+    
+        var popup_5aeaa4710d667b217bbc8b011323f870 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d6ec41fd77efce4eeb021b1bb2fe07c5 = $(`<div id="html_d6ec41fd77efce4eeb021b1bb2fe07c5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>MARRAI Maria Santa</b><br>         Nascita: Seravezza<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36255468/Lq6WY1q" target="_blank">129</a><br>         Data: 1812-10-05         </div>         </div>`)[0];
+                popup_5aeaa4710d667b217bbc8b011323f870.setContent(html_d6ec41fd77efce4eeb021b1bb2fe07c5);
+            
+        
+
+        marker_beb6013db303d12b0dc11cae5b60ad69.bindPopup(popup_5aeaa4710d667b217bbc8b011323f870)
+        ;
+
+        
+    
+    
+            var marker_a719875ace9e5f54d867da6675ef8c27 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_2816b95542ebb6fb2d74c916e5c65ed0 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_a719875ace9e5f54d867da6675ef8c27.setIcon(div_icon_2816b95542ebb6fb2d74c916e5c65ed0);
+        
+    
+        var popup_398e686ed5f53809810c39334ae6c75e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_455c077e58fa1539d7882e5af14b3a6c = $(`<div id="html_455c077e58fa1539d7882e5af14b3a6c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRETTI Giovacchino Giuseppe Vitale</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36255085/w9AxrBy" target="_blank">40</a><br>         Data: 1811-02-20         </div>         </div>`)[0];
+                popup_398e686ed5f53809810c39334ae6c75e.setContent(html_455c077e58fa1539d7882e5af14b3a6c);
+            
+        
+
+        marker_a719875ace9e5f54d867da6675ef8c27.bindPopup(popup_398e686ed5f53809810c39334ae6c75e)
+        ;
+
+        
+    
+    
+            var marker_0fde7c0149c53966ba1528c0850982ba = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_0d6a58868866c888f98d161395b61f57 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_0fde7c0149c53966ba1528c0850982ba.setIcon(div_icon_0d6a58868866c888f98d161395b61f57);
+        
+    
+        var popup_75fd636b2ed0c07606a912dfd5de9c60 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ab5611fbe2ae1898d39ea27521b26b48 = $(`<div id="html_ab5611fbe2ae1898d39ea27521b26b48" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BOTTARI Elisabetta</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1801         </div>         </div>`)[0];
+                popup_75fd636b2ed0c07606a912dfd5de9c60.setContent(html_ab5611fbe2ae1898d39ea27521b26b48);
+            
+        
+
+        marker_0fde7c0149c53966ba1528c0850982ba.bindPopup(popup_75fd636b2ed0c07606a912dfd5de9c60)
+        ;
+
+        
+    
+    
+            var marker_ebf07a44bf852ab014156a7fd1041fbb = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_4d85e6ebf1715294a35e4597019995e2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_ebf07a44bf852ab014156a7fd1041fbb.setIcon(div_icon_4d85e6ebf1715294a35e4597019995e2);
+        
+    
+        var popup_3929b5ddb3c723c709d5b49860553d7f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b52ba0365ca362c7f777ccfb958cae0b = $(`<div id="html_b52ba0365ca362c7f777ccfb958cae0b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>FERRONI Isidoro Celestino</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1792         </div>         </div>`)[0];
+                popup_3929b5ddb3c723c709d5b49860553d7f.setContent(html_b52ba0365ca362c7f777ccfb958cae0b);
+            
+        
+
+        marker_ebf07a44bf852ab014156a7fd1041fbb.bindPopup(popup_3929b5ddb3c723c709d5b49860553d7f)
+        ;
+
+        
+    
+    
+            var marker_1b379529ede07ff603f69559f4bfba45 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_0c75267db2ee6466548fcfdd0a7c6130 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_1b379529ede07ff603f69559f4bfba45.setIcon(div_icon_0c75267db2ee6466548fcfdd0a7c6130);
+        
+    
+        var popup_7fb3852499e436aa90dd7fce8d594ea9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f99752433f8ac764413077709af2d6bb = $(`<div id="html_f99752433f8ac764413077709af2d6bb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>CECCARELLI Maria Carolina</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1789         </div>         </div>`)[0];
+                popup_7fb3852499e436aa90dd7fce8d594ea9.setContent(html_f99752433f8ac764413077709af2d6bb);
+            
+        
+
+        marker_1b379529ede07ff603f69559f4bfba45.bindPopup(popup_7fb3852499e436aa90dd7fce8d594ea9)
+        ;
+
+        
+    
+    
+            var marker_036f42cb2144ff717b68ee9d6c9ce33e = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_50c6ecfc9a30615ada80a60fc11aa6aa = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_036f42cb2144ff717b68ee9d6c9ce33e.setIcon(div_icon_50c6ecfc9a30615ada80a60fc11aa6aa);
+        
+    
+        var popup_d1fbd4f81799be96f30c04b28836820c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0c6da4fe2393c3b485362266608df5b3 = $(`<div id="html_0c6da4fe2393c3b485362266608df5b3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GARIBALDI Iacopo</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1803         </div>         </div>`)[0];
+                popup_d1fbd4f81799be96f30c04b28836820c.setContent(html_0c6da4fe2393c3b485362266608df5b3);
+            
+        
+
+        marker_036f42cb2144ff717b68ee9d6c9ce33e.bindPopup(popup_d1fbd4f81799be96f30c04b28836820c)
+        ;
+
+        
+    
+    
+            var marker_f87d12bc2f56644cccbd8bcedf2dcc34 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_9bb7138f48c465b26023e7491088769f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_f87d12bc2f56644cccbd8bcedf2dcc34.setIcon(div_icon_9bb7138f48c465b26023e7491088769f);
+        
+    
+        var popup_d75b32ef5574fa3be9523ca0cf1ff954 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b0b5d25c2f70d37b35e74eacf770649b = $(`<div id="html_b0b5d25c2f70d37b35e74eacf770649b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PAPINI Maria Domenica</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1807         </div>         </div>`)[0];
+                popup_d75b32ef5574fa3be9523ca0cf1ff954.setContent(html_b0b5d25c2f70d37b35e74eacf770649b);
+            
+        
+
+        marker_f87d12bc2f56644cccbd8bcedf2dcc34.bindPopup(popup_d75b32ef5574fa3be9523ca0cf1ff954)
+        ;
+
+        
+    
+    
+            var marker_92e63fc6e29d9491d271cf2e0aacb88b = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_a6007f8c4a25bdd8a9b5a53b0045124c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_92e63fc6e29d9491d271cf2e0aacb88b.setIcon(div_icon_a6007f8c4a25bdd8a9b5a53b0045124c);
+        
+    
+        var popup_3ea6c3c6fb0d3e86cc382bf728c3c774 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dec9f2c4265c2992c456f6708aa8e116 = $(`<div id="html_dec9f2c4265c2992c456f6708aa8e116" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PAPINI Claudio</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1799         </div>         </div>`)[0];
+                popup_3ea6c3c6fb0d3e86cc382bf728c3c774.setContent(html_dec9f2c4265c2992c456f6708aa8e116);
+            
+        
+
+        marker_92e63fc6e29d9491d271cf2e0aacb88b.bindPopup(popup_3ea6c3c6fb0d3e86cc382bf728c3c774)
+        ;
+
+        
+    
+    
+            var marker_08a34fb22322c4555c31d41ee9c9edb3 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_8eb85ac07063e21b7f5e48eac4d1f70a = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_08a34fb22322c4555c31d41ee9c9edb3.setIcon(div_icon_8eb85ac07063e21b7f5e48eac4d1f70a);
+        
+    
+        var popup_f560007c647d7eb9a36885ef2138be55 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7d50246816de0f2bb041191c89467d54 = $(`<div id="html_7d50246816de0f2bb041191c89467d54" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>PASQUINI Stefano Domenico</b><br>         Nascita: Capezzano Monte, Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1808         </div>         </div>`)[0];
+                popup_f560007c647d7eb9a36885ef2138be55.setContent(html_7d50246816de0f2bb041191c89467d54);
+            
+        
+
+        marker_08a34fb22322c4555c31d41ee9c9edb3.bindPopup(popup_f560007c647d7eb9a36885ef2138be55)
+        ;
+
+        
+    
+    
+            var marker_5a1f473d8f510a3737027ada4dd8ccaa = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_06e258983c249460f0016ee35b6c8004 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_5a1f473d8f510a3737027ada4dd8ccaa.setIcon(div_icon_06e258983c249460f0016ee35b6c8004);
+        
+    
+        var popup_959ec2881b000a2f7e1451cde00580d7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f66a321ca223935073fa231a1e90ee8f = $(`<div id="html_f66a321ca223935073fa231a1e90ee8f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>GARIBALDI Maria Teresa</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36239037/wW3MeEW" target="_blank">61</a><br>         Data: 1818-05-05         </div>         </div>`)[0];
+                popup_959ec2881b000a2f7e1451cde00580d7.setContent(html_f66a321ca223935073fa231a1e90ee8f);
+            
+        
+
+        marker_5a1f473d8f510a3737027ada4dd8ccaa.bindPopup(popup_959ec2881b000a2f7e1451cde00580d7)
+        ;
+
+        
+    
+    
+            var marker_86d64394de9732f52d35d0dd2737d3a2 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_9e3f890e8f6918b9dcfb8f05a3ac98ff = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_86d64394de9732f52d35d0dd2737d3a2.setIcon(div_icon_9e3f890e8f6918b9dcfb8f05a3ac98ff);
+        
+    
+        var popup_3ac6990e3b87b818757a183eefc303dd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1e76c190db7b0fd72fbc6a85fbf65afc = $(`<div id="html_1e76c190db7b0fd72fbc6a85fbf65afc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BALDUINI Domenico</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1820         </div>         </div>`)[0];
+                popup_3ac6990e3b87b818757a183eefc303dd.setContent(html_1e76c190db7b0fd72fbc6a85fbf65afc);
+            
+        
+
+        marker_86d64394de9732f52d35d0dd2737d3a2.bindPopup(popup_3ac6990e3b87b818757a183eefc303dd)
+        ;
+
+        
+    
+    
+            var marker_3b28ce1ccfd6690031ea39af97fe62d7 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_176b9442540adc100e698e0c9650ba76 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_3b28ce1ccfd6690031ea39af97fe62d7.setIcon(div_icon_176b9442540adc100e698e0c9650ba76);
+        
+    
+        var popup_7b42f46505eec5d09f89ef2967fb4bdf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_057c699d56222f2d6d8f7da4ab430933 = $(`<div id="html_057c699d56222f2d6d8f7da4ab430933" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>LUISI Teresa</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1830         </div>         </div>`)[0];
+                popup_7b42f46505eec5d09f89ef2967fb4bdf.setContent(html_057c699d56222f2d6d8f7da4ab430933);
+            
+        
+
+        marker_3b28ce1ccfd6690031ea39af97fe62d7.bindPopup(popup_7b42f46505eec5d09f89ef2967fb4bdf)
+        ;
+
+        
+    
+    
+            var marker_dd8c84000c9a9086285241de9605fed2 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_ad1afd805aa5ddf7a195b85055442f6f = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_dd8c84000c9a9086285241de9605fed2.setIcon(div_icon_ad1afd805aa5ddf7a195b85055442f6f);
+        
+    
+        var popup_a7a575bd58994e91e35830c96b79752a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_87b8375101c72a10589410ad96aa9f10 = $(`<div id="html_87b8375101c72a10589410ad96aa9f10" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BARSANTI Domenico</b><br>         Nascita: Pietrasanta<br>         Num. <a href="https://antenati.cultura.gov.it/ark:/12657/an_ua36256878/5B4E9rm" target="_blank">48</a><br>         Data: 1814-02-24         </div>         </div>`)[0];
+                popup_a7a575bd58994e91e35830c96b79752a.setContent(html_87b8375101c72a10589410ad96aa9f10);
+            
+        
+
+        marker_dd8c84000c9a9086285241de9605fed2.bindPopup(popup_a7a575bd58994e91e35830c96b79752a)
+        ;
+
+        
+    
+    
+            var marker_cf38fc464772cfba2352a7b04257c662 = L.marker(
+                [43.9589031, 10.2332031],
+                {
+}
+            ).addTo(marker_cluster_e5a4006da39a1bcb610c29abdb5db57b);
+        
+    
+            var div_icon_329739b6062c1365d461ef3b0aca9d11 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            width:8px; height:8px;\n            background:#000;\n            border-radius:50%;\n            border:1px solid #000;\n            opacity:0.7;\"\u003e\n        \u003c/div\u003e\n        ",
+  "iconSize": [8, 8],
+  "iconAnchor": [4.0, 4.0],
+  "className": "empty",
+});
+            marker_cf38fc464772cfba2352a7b04257c662.setIcon(div_icon_329739b6062c1365d461ef3b0aca9d11);
+        
+    
+        var popup_d6d689b7a4b1c693adf67614ee6633bf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1b8c74242fe521bef53f59849ee711c3 = $(`<div id="html_1b8c74242fe521bef53f59849ee711c3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: system-ui; font-size: 12px;">         <b>BELFIORE Iacopa</b><br>         Nascita: Pietrasanta<br>         Num. <a href="" target="_blank"></a><br>         Data: 1817         </div>         </div>`)[0];
+                popup_d6d689b7a4b1c693adf67614ee6633bf.setContent(html_1b8c74242fe521bef53f59849ee711c3);
+            
+        
+
+        marker_cf38fc464772cfba2352a7b04257c662.bindPopup(popup_d6d689b7a4b1c693adf67614ee6633bf)
+        ;
+
+        
+    
+    
+            marker_cluster_e5a4006da39a1bcb610c29abdb5db57b.addTo(feature_group_2d8d74b599c31b8a1db661a99311851a);
+        
+    
+            feature_group_2d8d74b599c31b8a1db661a99311851a.addTo(map_70be4e1019319961dd9790f16e8d9325);
+        
+    
+            var layer_control_06f692fcc19d8894d4d47dfdd7d4d661_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_45b15643c9a20e22770e542ed75d9b9b,
+                },
+                overlays :  {
+                    "Heatmap nascite" : feature_group_9000a67fe785976a02b06b450c430fce,
+                    "Persone (spiderfy)" : feature_group_2d8d74b599c31b8a1db661a99311851a,
+                },
+            };
+            let layer_control_06f692fcc19d8894d4d47dfdd7d4d661 = L.control.layers(
+                layer_control_06f692fcc19d8894d4d47dfdd7d4d661_layers.base_layers,
+                layer_control_06f692fcc19d8894d4d47dfdd7d4d661_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_70be4e1019319961dd9790f16e8d9325);
+
+        
+</script>
+</html>
